@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章列表</title>
-    <style>
-        /* 添加一些基本的样式 */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .article-list {
-            list-style: none;
-            padding: 0;
-        }
-        .article-list li {
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>文章列表</title>
+  <style>
+    /* 添加一些基本的样式 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .article-list {
+      list-style: none;
+      padding: 0;
+    }
+    .article-list li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>文章列表</h1>
-    <ul class="article-list" id="articleList">
-        <!-- 文章列表将在这里动态生成 -->
-    </ul>
+  <h1>文章列表</h1>
+  <!-- <ul class="article-list" id="articleList">
+    
+  </ul> -->
+  <ul id="fileList"></ul>
 
-    <script>
-        // 模拟从后端获取文章列表的数据
-        const articles = [
-            { id: 1, title: "文章标题1", content: "文章内容1" },
-            { id: 2, title: "文章标题2", content: "文章内容2" },
-            { id: 3, title: "文章标题3", content: "文章内容3" }
-            // 可以从后端获取更多文章数据
-        ];
+  <script>
 
-        // 将文章列表动态生成到页面上
-        const articleList = document.getElementById('articleList');
-        articles.forEach(article => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="./article/cp${article.id}.html">${article.title}</a>`;
-            articleList.appendChild(li);
+    fetch(`./article`)
+      .then(response => response.json())
+      .then(files => {
+        const fileList = document.getElementById('fileList');
+        files.sort((a, b) => a.time - b.time); // 按时间顺序排序
+        files.forEach(file => {
+          const listItem = document.createElement('li');
+          listItem.textContent = file.name;
+          fileList.appendChild(listItem);
         });
-    </script>
+      })
+      .catch(error => {
+        console.error('Error fetching file list:', error);
+      });
+    // // 模拟从后端获取文章列表的数据
+    // const articles = [
+    //   { id: 1, title: "文章标题1", content: "文章内容1" },
+    //   { id: 2, title: "文章标题2", content: "文章内容2" },
+    //   { id: 3, title: "文章标题3", content: "文章内容3" }
+    //   // 可以从后端获取更多文章数据
+    // ];
+
+    // // 将文章列表动态生成到页面上
+    // const articleList = document.getElementById('articleList');
+    // articles.forEach(article => {
+    //   const li = document.createElement('li');
+    //   li.innerHTML = `<a href="./article/cp${article.id}.html">${article.title}</a>`;
+    //   articleList.appendChild(li);
+    // });
+  </script>
 </body>
 </html>

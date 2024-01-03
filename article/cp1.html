@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章模板</title>
-    <!-- <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        showProcessingMessages: false, //关闭js加载过程信息
-        messageStyle: "none", //不显示信息
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
-          ignoreClass: 'crayon-.*' // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割    
-        },
-        'HTML-CSS': {
-            showMathMenu: false //禁用右键菜单
-        }
-      });
-      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    </script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
-    </script> -->
+  <meta charset="UTF-8">
+  <title>文章模板</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+        ignoreClass: 'crayon-.*'
+      },
+      'HTML-CSS': {
+        showMathMenu: false
+      }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
+  <script src="markdown.js"></script>
 </head>
 <body>
-    <h1>文章标题</h1>
-    <p>作者：作者名</p>
-    <!-- <p>$$c^2=a^2+b^2$$</p> -->
-    <code markdown>
-## 在HTML中使用markdown
+  <h1>文章标题</h1>
+  
+  <div id="preview"> </div>
+  
+  <script type="text/javascript">
+  document.getElementById("preview").innerHTML = markdown.toHTML(
+`## URL
 
-在这里面写就行。
-</code>
-<script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
-<script>
-var m=document.querySelectorAll('code[markdown]');
-for(var i=0;i<m.length;i++){
-m[i].outerHTML='<div>'+marked(m[i].innerHTML)+'</div>';
-}
-</script>
+* Google
+
+* Bing
+
+$$a^2=b^2+c^2$$
+
+## a标签
+
+[迹忆客](https://www.jiyik.com)`
+);
+  </script>
+  
 </body>
 </html>
