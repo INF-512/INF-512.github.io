@@ -37,7 +37,7 @@
         const articleList = document.getElementById('articleList');
         articles.forEach(article => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="/article?id=${article.id}">${article.title}</a>`;
+            li.innerHTML = `<a href="./article/cp${article.id}.html">${article.title}</a>`;
             articleList.appendChild(li);
         });
     </script>
