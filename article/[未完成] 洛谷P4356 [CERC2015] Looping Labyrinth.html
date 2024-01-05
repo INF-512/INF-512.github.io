@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>洛谷P4356 [CERC2015] Looping Labyrinth</title>
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\(","\)"] ],
+        displayMath: [ ['$$','$$'], ["\[","\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+        ignoreClass: 'crayon-.*'
+      },
+      'HTML-CSS': {
+        showMathMenu: false
+      }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
+  
+  <link rel="stylesheet" type="text/css" href="../lib/highlight/styles/atom-one-light.css"/>
+  <script src="../lib/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <style>
+    @font-face
+    {
+      font-family: abc;
+      src: url('../lib/ttf/Monaco.ttf');
+    }
+    code { font-family: "abc", monospace; }
+    body {
+      max-width:800px;
+      word-break: break-all;
+      word-wrap:break-word;
+      margin: 0 auto;
+    }
+    img { max-height: 300px; }
+    a { text-decoration:none; }
+    a:link { color: #0E90D2; }
+    a:active { color: #0E90D2; }
+    a:visited { color:#0E90D2; }
+    a:hover { color: #095F8A; }
+  </style>
+</head>
+<body>
+  <h1><a href="https://www.luogu.com.cn/problem/P4356">洛谷P4356 [CERC2015] Looping Labyrinth</a></h1>
+  <hr>
+  <div id="content"></div>
+<pre id="p1">
+
+## 定理
+
+若 $(\lambda x_u, \lambda y_u, 0, 0) \rightarrow (0, 0, 0, 0)$ ，则 $(x_u, y_u, 0, 0) \rightarrow (0, 0, 0, 0)$。
+
+证明：
+
+如果 $(\lambda x_u, \lambda y_u, 0, 0)$ 到 $(0, 0, 0, 0)$ 的路径经过 $(x_u, y_u)$，那么定理成立。
+
+我们假设 $(\lambda x_u, \lambda y_u, 0, 0)$ 到 $(0, 0, 0, 0)$ 的路径不经过 $(x_u, y_u)$。
+
+![](https://cdn.luogu.com.cn/upload/image_hosting/hnyggk5b.png)
+
+蓝线表示 $(-4, -4, 0, 0)$ 到 $(0, 0, 0, 0)$ 的路径，红线表示重复蓝线的下半部分（因为所有块都是相同的）。
+
+可以发现，如果蓝线想要不经过 $(-2, -2, 0, 0)$，就必定会与红线相交，然后经过 $(-2, -2, 0, 0)$。
+
+得到结论 $(-4, -4, 0, 0)$ 到 $(0, 0, 0, 0)$ 的路径必定经过 $(-2, -2, 0, 0)$
+
+~~写完才发现图片画反了，不过没关系，把坐标改为负数就好了。~~
+
+## 存疑
+
+为什么要用bfs，dfs行不行？
+
+为什么用bfs能得到所有向量，有没有可能漏掉几个特殊的向量？
+
+## 代码
+
+```
+// test.cpp
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+#define uint unsigned int
+#define pii pair&lt;int, int&gt;
+template &lt;typename T&gt; using vector2 = vector&lt;vector&lt;T&gt;&gt;;
+template &lt;typename T&gt; using MaxHeap = priority_queue&lt;T&gt;;
+template &lt;typename T&gt; using MinHeap = priority_queue&lt;T, vector&lt;T&gt;, greater&lt;T&gt;&gt;;
+#define all(x) (x).begin(), (x).end()
+// #define endl '\n'
+// #define endl &quot; line in : &quot; &lt;&lt; __LINE__ &lt;&lt; endl
+const int N = 105, INF = 1e16, P = 998244353;
+const int dir[] = { 0, -1, 0, 1, 0 };
+int ceil(int a, int p) { return a + (p - a % p) % p; }
+int floor(int a, int p) { return a - (a % p + p) % p; }
+int n, m;
+string s[N];
+int q;
+int vis[N][N];
+pii pB[N][N];
+int U, V;
+void add_vector(int u, int v) {
+  if (U == INF) return;
+  if (u &lt; 0 || (u == 0 &amp;&amp; v &lt; 0)) u = -u, v = -v;
+  int g = gcd(u, abs(v));
+  u /= g, v /= g;
+  if (U == 0 &amp;&amp; V == 0) U = u, V = v;
+  else if (U != u || V != v) U = V = INF;
+}
+void test() {
+  cin &gt;&gt; n &gt;&gt; m;
+  for (int i = 0; i &lt; n; i++)
+    cin &gt;&gt; s[i];
+  queue&lt;pii&gt; Q;
+  Q.push({ 0, 0 });
+  vis[0][0] = 1, pB[0][0] = { 0, 0 };
+  while (Q.size()) {
+    auto [x, y] = Q.front(); Q.pop();
+    for (int k = 0; k &lt; 4; k++) {
+      int r = x + dir[k], c = y + dir[k + 1];
+      int rb = floor(r, n) / n, cb = floor(c, m) / m;
+      int ri = (r % n + n) % n, ci = (c % m + m) % m;
+      if (s[ri][ci] == '.') {
+        if (vis[ri][ci] == 0)
+          Q.push({ r, c }), vis[ri][ci] = 1, pB[ri][ci] = { rb, cb };
+        else if (pB[ri][ci] != pii(rb, cb))
+          add_vector(rb - pB[ri][ci].first, cb - pB[ri][ci].second);
+      }
+    }
+  }
+  cin &gt;&gt; q;
+  while (q--) {
+    int r, c;
+    cin &gt;&gt; r &gt;&gt; c;
+    int rb = floor(r, n) / n, cb = floor(c, m) / m;
+    int ri = (r % n + n) % n, ci = (c % m + m) % m;
+    if (vis[ri][ci] == 0)
+      cout &lt;&lt; "no" &lt;&lt; endl;
+    else {
+      if (U == 0 &amp;&amp; V == 0)
+        cout &lt;&lt; (pii(rb, cb) == pB[ri][ci] ? "yes" : "no") &lt;&lt; endl;
+      else if (U == INF)
+        cout &lt;&lt; "yes" &lt;&lt; endl;
+      else {
+        int u = rb - pB[ri][ci].first, v = cb - pB[ri][ci].second;
+        if (u == 0 &amp;&amp; v == 0)
+          cout &lt;&lt; "yes" &lt;&lt; endl;
+        else {
+          if (u &lt; 0 || (u == 0 &amp;&amp; v &lt; 0)) u = -u, v = -v;
+          int g = gcd(u, abs(v));
+          u /= g, v /= g;
+          cout &lt;&lt; (U == u &amp;&amp; V == v ? "yes" : "no") &lt;&lt; endl;
+        }
+      }
+    }
+  }
+}
+signed main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  // int T; cin &gt;&gt; T; while (T--)
+  test();
+  return 0;
+}
+```
+
+## 收获
+
+化简向量 $(u, v)$，使 $gcd(u, v) = 1$ 并且若 $u = 0$ 则 $v \ge 0$；否则，$u > 0$。
+
+```
+pii f(int u, int v) {
+  if (u < 0 || (u == 0 && v < 0))
+    u = -u, v = -v;
+  int g = gcd(u, abs(v));
+  return g ? { u / g, v / g } : { 0, 0 };
+}
+```
+
+</pre>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked.parse(document.getElementById('p1').innerText);
+    document.getElementById("p1").style.display="none";
+  </script>
+  
+</body>
+</html>

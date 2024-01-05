@@ -1,0 +1,21 @@
+圆角边框
+border-radius:25px;
+
+设置字体
+@font-face
+{
+  font-family: Monaco;
+  src: url('Monaco.ttf');
+}
+div
+{
+  font-family:Monaco;
+}
+
+多列布局
+
+CSS 网格布局
+
+id 选择器以 "#" 来定义
+
+类选择器以一个点 . 号显示
