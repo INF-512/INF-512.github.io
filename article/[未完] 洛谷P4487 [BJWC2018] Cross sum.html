@@ -1,8 +1,12 @@
 <!doctype html>
 <html>
 <head>
+  <base href="https://inf-512.github.io/">
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>洛谷P4487 [BJWC2018] Cross sum</title>
+  
+  <link rel="icon" href="/logo.ico" type="image/x-icon">
   
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -24,18 +28,18 @@
   </script>
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
   
-  <link rel="stylesheet" type="text/css" href="../lib/highlight/styles/atom-one-light.css"/>
-  <script src="../lib/highlight/highlight.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
+  <script src="/lib/highlight/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   
   <style>
     @font-face
     {
       font-family: abc;
-      src: url("../lib/ttf/MONACO.TTF");
+      src: url("/lib/ttf/MONACO.TTF");
     }
     code { font-family: "abc", monospace; }
-    body {
+    #text {
       max-width:800px;
       word-break: break-all;
       word-wrap:break-word;
@@ -48,11 +52,78 @@
     a:visited { color:#0E90D2; }
     a:hover { color: #095F8A; }
   </style>
+  
+  <style>
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EBEDEF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #999999;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #EBEDEF;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 100%;
+    position: fixed;
+  }
+  .openbtn:hover {
+    background-color: #EBEDEF;
+  }
+  #main {
+    transition: margin-left .5s;
+  }
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  @media screen and (max-width: 950px){
+    .openbtn {
+      opacity:0.5;
+    }
+  }
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin: 10px auto;
+  }
+  </style>
+  
 </head>
 <body>
-  <h1><a href="https://www.luogu.com.cn/problem/P4487">洛谷P4487 [BJWC2018] Cross sum</a></h1>
-  <hr>
-  <div id="content"></div>
+  <div id="mySidebar" class="sidebar">
+    <img src="/logo.jpg" alt="logo" width="150px" height="150px" style="border-radius: 100%; " class="aligncenter">
+    <a href="/index.html">文章列表</a>
+  </div>
+  
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  <div id="text">
+    <h1><a href="https://www.luogu.com.cn/problem/P4487">洛谷P4487 [BJWC2018] Cross sum</a></h1>
+    <hr>
+    <div id="content"></div>
+  </div>
+</div>
 <pre id="p1">
 对于每一个线索格子，格子右上角（如果有）看作行节点，数字看作点权，格子左下角（如果有）看作列节点，数字看作点权；每个空格看作行节点到列节点的边，构造二分图，那么问题变成给所有边赋值，使每个节点的点权恰好等于它的所有边的边权异或和。
 
@@ -91,11 +162,11 @@ p[i][j].first : 表示格子 (i, j) 上方的线索编号
 p[i][j].second : 表示格子 (i, j) 左方的线索编号
 递推求出每个kind=4格子的 p[i][j]
 
-vector<array<int, 4>> e;
+vector&lt;array&lt;int, 4&gt;&gt; e;
 起点线索编号，终点线索编号，格子坐标
 以线索编号为点，线索权值为点权，格子为边，建二分图
 
-vector<vector<array<int, 3>>> g;
+vector&lt;vector&lt;array&lt;int, 3&gt;&gt;&gt; g;
 first 表示终点线索编号，second 表示格子坐标
 求出二分图的任意一颗生成树
 取了的边vis[i][j]=1
@@ -227,6 +298,27 @@ signed main() {
     document.getElementById('content').innerHTML =
       marked.parse(document.getElementById('p1').innerText);
     document.getElementById("p1").style.display="none";
+  </script>
+  
+  <script>
+  var flag = 0;
+  function openNav() {
+    if (flag == 0) {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      flag = 1;
+    }
+    else {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      flag = 0;
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
   </script>
   
 </body>
