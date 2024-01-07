@@ -28,15 +28,15 @@
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
   </script>
   
-  <!-- 加载 Markdown 转 HTML 的 marked -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  
-  <!-- marked.parse("Markdown text");  -->
-  
   <!-- 加载代码高亮 -->
   <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
   <script src="/lib/highlight/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
+  
+  <!-- 加载 Markdown 转 HTML 的 marked -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- marked.parse("Markdown text");  -->
   
   <!-- 设置代码字体 -->
   <style>
@@ -49,16 +49,14 @@
   
 </head>
 <body>
-<div id="markdown_text">
-  
-</div>
+<div id="markdown_text"></div>
 <script>
   function show_markdown_file(filename) {
     fetch(filename)
     .then(response => response.text())
     .then(data => {
       document.getElementById("markdown_text").innerHTML = marked.parse(data);
-      console.log(data);
+      console.log(marked.parse(data));
     })
     .catch(error => {
       console.error("读取文件时发生错误", error);
