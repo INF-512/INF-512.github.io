@@ -1,8 +1,12 @@
-<!-- <!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <title>Marked in the browser</title>
+  <base href="https://inf-512.github.io/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+  <!-- 加载 MathJax -->
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       showProcessingMessages: false,
@@ -21,105 +25,46 @@
     });
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
-</head>
-<body>
-  <div id="content"></div>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+  
+  <!-- 加载 Markdown 转 HTML 的 marked -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    document.getElementById('content').innerHTML =
-      marked.parse(`
-
-`);
-  </script>
-</body>
-</html> -->
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title>Code Highlight Example</title>
-  <link rel="stylesheet" type="text/css" href="../lib/highlight/styles/atom-one-light.css"/>
-  <script src="../lib/highlight/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</head>
-<body>
-  <pre><code class="cpp">
-#include <iostream>
-using namespace std;
-
-int main() {
-   cout << "Hello World!";
-   return 0;
-}
-    </code></pre>
-</body>
-</html>
- -->
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>文章标题</title>
   
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      showProcessingMessages: false,
-      messageStyle: "none",
-      extensions: ["tex2jax.js"],
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\(","\)"] ],
-        displayMath: [ ['$$','$$'], ["\[","\]"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
-        ignoreClass: 'crayon-.*'
-      },
-      'HTML-CSS': {
-        showMathMenu: false
-      }
-    });
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-  </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
+  <!-- marked.parse("Markdown text");  -->
   
-  <link rel="stylesheet" type="text/css" href="../lib/highlight/styles/atom-one-light.css"/>
-  <script src="../lib/highlight/highlight.min.js"></script>
+  <!-- 加载代码高亮 -->
+  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
+  <script src="/lib/highlight/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   
+  <!-- 设置代码字体 -->
   <style>
-    @font-face
-    {
+    @font-face {
       font-family: abc;
-      src: url('../lib/ttf/Monaco.ttf');
+      src: url("/lib/ttf/MONACO.TTF");
     }
     code { font-family: "abc", monospace; }
-    body {
-      max-width:800px;
-      word-break: break-all;
-      word-wrap:break-word;
-      margin: 0 auto;
-    }
-    img { max-height: 300px; }
-    a { text-decoration:none; }
-    a:link { color: #0E90D2; }
-    a:active { color: #0E90D2; }
-    a:visited { color:#0E90D2; }
-    a:hover { color: #095F8A; }
   </style>
+  
 </head>
 <body>
-  <h1>文章标题</h1>
-  <hr>
-  <div id="content"></div>
-<pre id="p1">
-
-</pre>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    document.getElementById('content').innerHTML =
-      marked.parse(document.getElementById('p1').innerText);
-    document.getElementById("p1").style.display="none";
-  </script>
+<div id="markdown_text">
   
+</div>
+<script>
+  function show_markdown_file(filename) {
+    fetch(filename)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("markdown_text").innerHTML = marked.parse(data);
+      console.log(data);
+    })
+    .catch(error => {
+      console.error("读取文件时发生错误", error);
+    });
+  }
+  show_markdown_file("home.md");
+</script>
 </body>
 </html>
