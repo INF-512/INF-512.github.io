@@ -25,30 +25,6 @@
 所以我们只要求出二分图的任意一颗生成树，把生成树外的格子任意赋值，使用dfs确定生成树上的边权，最后记得检查一下有没有重复的格子，就做完了。
 
 ```cpp
-/*
-下面是一些变量的解释
-
-int kind[i][j] : 表示格子 (i, j) 的类型
-int wt[i] : 表示编号为 i 的线索权值
-pii p[i][j]
-p[i][j].first : 表示格子 (i, j) 上方的线索编号
-p[i][j].second : 表示格子 (i, j) 左方的线索编号
-递推求出每个kind=4格子的 p[i][j]
-
-vector&lt;array&lt;int, 4&gt;&gt; e;
-起点线索编号，终点线索编号，格子坐标
-以线索编号为点，线索权值为点权，格子为边，建二分图
-
-vector&lt;vector&lt;array&lt;int, 3&gt;&gt;&gt; g;
-first 表示终点线索编号，second 表示格子坐标
-求出二分图的任意一颗生成树
-取了的边vis[i][j]=1
-
-把生成树外的格子(vis[i][j]==0)随机赋值
-cwt[i] : 表示编号为 i 的线索的当前权值
-ewt[i][j] : 表示格子 (i, j) 的权值
-
-*/
 signed main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
