@@ -5,7 +5,6 @@
   <base href="127.0.0.1:8080/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <title></title>
   
   <!-- 加载 MathJax -->
@@ -39,23 +38,28 @@
   <script src="/lib/highlight/highlight.min.js"></script>
   <!-- hljs.highlightAll(); -->
   
-  <!-- 设置代码字体 -->
   <style>
+    /* 设置代码字体 */
     @font-face {
       font-family: abc;
-      src: url("/lib/ttf/MONACO.TTF");
+      src: url("/lib/ttf/monaco.ttf");
     }
     code { font-family: "abc", monospace; }
+    
+    body {
+      font-family: sans-serif;
+      margin: 0 auto;
+    }
+    
+    /* markdown 文本区域样式 */
     #markdown_text {
       max-width:800px;
       word-break: break-all;
       word-wrap:break-word;
       margin: 0 auto;
     }
-  </style>
-  
-  <!-- 侧边栏样式 -->
-  <style>
+    
+    /* 侧边栏样式 */
     .sidebar {
       width: 250px;
       height: 100%;
@@ -64,24 +68,11 @@
       right: calc(50% + 400px);
       background-color: #f0f0f0;
     }
-  </style>
-  
-  <!-- 目录样式 -->
-<!--   <style>
-    .toc {
-      width: 250px;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: calc(50% + 400px);
-      background-color: #f0f0f0;
-    }
-  </style> -->
-  
-  <!-- 列表样式 -->
-  <style>
+    
+    /* 列表样式 */
     ul {
       display: none;
+      list-style: none;
     }
   </style>
   
@@ -105,8 +96,6 @@
 <li><a href="/test.html?src=/home.md?ver=1431026427&pos=u1">home</a></li>
 </ul>
 </div>
-<!-- 目录区域 -->
-<div class="toc"></div>
 <!-- Markdown 文本区域 -->
 <div id="markdown_text"></div>
 <script>

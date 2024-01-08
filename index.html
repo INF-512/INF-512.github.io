@@ -1,35 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>INF_512的博客</title>
+  <!-- <base href="https://inf-512.github.io/"> -->
+  <base href="127.0.0.1:8080/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>INF Wiki</title>
+  
+  <!-- 加载 MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\(","\)"] ],
+        displayMath: [ ['$$','$$'], ["\[","\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+        ignoreClass: 'crayon-.*'
+      },
+      'HTML-CSS': {
+        showMathMenu: false
+      }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+  
+  <!-- 加载 Markdown 转 HTML 的 marked -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- marked.parse("Markdown text");  -->
+  
+  <!-- 加载代码高亮 -->
+  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
+  <script src="/lib/highlight/highlight.min.js"></script>
+  <!-- hljs.highlightAll(); -->
+  
   <style>
+    /* 设置代码字体 */
+    @font-face {
+      font-family: abc;
+      src: url("/lib/ttf/monaco.ttf");
+    }
+    code { font-family: "abc", monospace; }
+    
     body {
-      font-family: Arial, sans-serif;
-      max-width:800px;
+      font-family: sans-serif;
       margin: 0 auto;
     }
-    .article-list {
+    
+    /* markdown 文本区域样式 */
+    #markdown_text {
+      max-width:800px;
+      word-break: break-all;
+      word-wrap:break-word;
+      margin: 0 auto;
+    }
+    
+    /* 侧边栏样式 */
+    .sidebar {
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      padding-top: 50px;
+      right: calc(50% + 400px);
+/*      background-color: #f0f0f0;*/
+    }
+    
+    /* 列表样式 */
+    ul {
+      display: none;
       list-style: none;
-      padding: 0;
     }
-    .article-list li {
-      margin-bottom: 10px;
-    }
-    a { text-decoration:none; }
-    a:link { color: #0E90D2; }
-    a:active { color: #0E90D2; }
-    a:visited { color:#0E90D2; }
-    a:hover { color: #095F8A; }
   </style>
+  
 </head>
 <body>
-  <h1>文章列表</h1>
-  <hr>
-  <ul class="article-list" id="articleList">
-<li>2024-01-06 <a href="./article/初次见面.html">初次见面</a></li>
-<li>2024-01-06 <a href="./article/[未完] 洛谷P4487 [BJWC2018] Cross sum.html">[未完] 洛谷P4487 [BJWC2018] Cross sum</a></li>
-<li>2024-01-05 <a href="./article/[未完] 洛谷P4356 [CERC2015] Looping Labyrinth.html">[未完] 洛谷P4356 [CERC2015] Looping Labyrinth</a></li>
-  </ul>
+<!-- 侧边栏区域 -->
+<div class="sidebar">
+<ul id="u3">
+<li onclick="replace_ul('u3', 'u2')"><基础</li>
+<li><a href="/index.html?src=/算法\基础\dfs.md?ver=3826534895&pos=u3">dfs</a></li>
+<li><a href="/index.html?src=/算法\基础\二分.md?ver=437112368&pos=u3">二分</a></li>
+</ul>
+<ul id="u4">
+<li onclick="replace_ul('u4', 'u2')"><数学</li>
+<li><a href="/index.html?src=/算法\数学\gcd.md?ver=1512598520&pos=u4">gcd</a></li>
+<li><a href="/index.html?src=/算法\数学\ksm.md?ver=1729019817&pos=u4">ksm</a></li>
+</ul>
+<ul id="u2">
+<li onclick="replace_ul('u2', 'u1')"><算法</li>
+<li onclick="replace_ul('u2', 'u3')">基础></li>
+<li onclick="replace_ul('u2', 'u4')">数学></li>
+</ul>
+<ul id="u6">
+<li onclick="replace_ul('u6', 'u5')"><线段树</li>
+<li><a href="/index.html?src=/数据结构\线段树\SegTree.md?ver=1964360820&pos=u6">SegTree</a></li>
+<li><a href="/index.html?src=/数据结构\线段树\ZkwTree.md?ver=4286949048&pos=u6">ZkwTree</a></li>
+</ul>
+<ul id="u5">
+<li onclick="replace_ul('u5', 'u1')"><数据结构</li>
+<li><a href="/index.html?src=/数据结构\ST表.md?ver=3300958009&pos=u5">ST表</a></li>
+<li onclick="replace_ul('u5', 'u6')">线段树></li>
+</ul>
+<ul id="u7">
+<li onclick="replace_ul('u7', 'u1')"><题目</li>
+<li><a href="/index.html?src=/题目\p001.md?ver=820839933&pos=u7">p001</a></li>
+<li><a href="/index.html?src=/题目\p002.md?ver=742430583&pos=u7">p002</a></li>
+<li><a href="/index.html?src=/题目\p003.md?ver=3127356303&pos=u7">p003</a></li>
+</ul>
+<ul id="u1">
+<li onclick="replace_ul('u1', 'u1')">x</li>
+<li><a href="/index.html?src=/首页.md?ver=3391899699&pos=u1">首页</a></li>
+<li onclick="replace_ul('u1', 'u2')">算法></li>
+<li onclick="replace_ul('u1', 'u5')">数据结构></li>
+<li onclick="replace_ul('u1', 'u7')">题目></li>
+</ul>
+</div>
+<!-- Markdown 文本区域 -->
+<div id="markdown_text"></div>
+<script>
+  function showMarkdownByName(filename) {
+    fetch(filename)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("markdown_text").innerHTML = marked.parse(data);
+      console.log(marked.parse(data));
+      hljs.highlightAll();
+    })
+    .catch(error => {
+      console.error("读取文件时发生错误", error);
+    });
+  }
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) {
+      if (name == "src") return "/首页.md";
+      if (name == "pos") return "u1";
+      return null;
+    }
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  function replace_ul(u1, u2) {
+    document.getElementById(u1).style.display="none";
+    document.getElementById(u2).style.display="block";
+  }
+  console.log(getParameterByName("src"));
+  console.log(getParameterByName("pos"));
+  showMarkdownByName(getParameterByName("src"));
+  document.getElementById(getParameterByName("pos")).style.display="block";
+</script>
 </body>
 </html>
