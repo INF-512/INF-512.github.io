@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read URL Parameters</title>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Example usage:
+        document.addEventListener("DOMContentLoaded", function() {
+            // Assuming the URL is something like: https://example.com/page?param1=value1&param2=value2
+            var param1Value = getParameterByName('param1');
+            var param2Value = getParameterByName('param2');
+
+            console.log('param1Value:', param1Value);
+            console.log('param2Value:', param2Value);
+        });
+    </script>
+</head>
+<body>
+    <!-- Your HTML content goes here -->
+</body>
+</html>

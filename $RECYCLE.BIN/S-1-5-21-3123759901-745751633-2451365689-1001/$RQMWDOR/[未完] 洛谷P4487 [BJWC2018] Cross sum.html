@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+  <base href="https://inf-512.github.io/">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>洛谷P4487 [BJWC2018] Cross sum</title>
+  
+  <link rel="icon" href="/logo.ico" type="image/x-icon">
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\(","\)"] ],
+        displayMath: [ ['$$','$$'], ["\[","\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+        ignoreClass: 'crayon-.*'
+      },
+      'HTML-CSS': {
+        showMathMenu: false
+      }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async> </script>
+  
+  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
+  <script src="/lib/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <style>
+    @font-face {
+      font-family: abc;
+      src: url("/lib/ttf/MONACO.TTF");
+    }
+    code { font-family: "abc", monospace; }
+    #text {
+      max-width:800px;
+      word-break: break-all;
+      word-wrap:break-word;
+      margin: 0 auto;
+    }
+    img { max-height: 300px; }
+    a { text-decoration:none; }
+    a:link { color: #0E90D2; }
+    a:active { color: #0E90D2; }
+    a:visited { color:#0E90D2; }
+    a:hover { color: #095F8A; }
+  </style>
+  
+  <style>
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EBEDEF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #999999;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #EBEDEF;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 100%;
+    position: fixed;
+  }
+  .openbtn:hover {
+    background-color: #EBEDEF;
+  }
+  #main {
+    transition: margin-left .5s;
+  }
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  @media screen and (max-width: 950px){
+    .openbtn {
+      opacity:0.5;
+    }
+  }
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin: 10px auto;
+  }
+  </style>
+  
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <img src="/logo.jpg" alt="logo" width="150px" height="150px" style="border-radius: 100%; " class="aligncenter">
+    <a href="/index.html">文章列表</a>
+  </div>
+  
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  <div id="text">
+    <h1><a href="https://www.luogu.com.cn/problem/P4487">洛谷P4487 [BJWC2018] Cross sum</a></h1>
+    <hr>
+    <div id="content"></div>
+  </div>
+</div>
+<pre id="p1">
+对于每一个线索格子，格子右上角（如果有）看作行节点，数字看作点权，格子左下角（如果有）看作列节点，数字看作点权；每个空格看作行节点到列节点的边，构造二分图，那么问题变成给所有边赋值，使每个节点的点权恰好等于它的所有边的边权异或和。
+
+性质 $1$：二分图是连通的。
+
+证明：
+
+我们考虑题目中的这句话：每一段连续的空格的左边或者上面的格子包含线索。
+
+假设一段连续的空格是横着的，那么最左边的空格的左边会有一个线索，我们从中任取一个的空格，认为这个连续空格（只有一个）是竖着的，那么这个空格的上面也会有一个线索，所以每一个空格均表示一条行节点和列节点的边。
+
+我认为题目应该再加上一句话：每个 $1$ 类型和 $3$ 类型的格子下面一个格子必定是空格，每个 $2$ 类型和 $3$ 类型的格子右边一个格子必定是空格。否则这个格子就没意义了。
+
+性质 $2$：求出二分图的任意一颗生成树，生成树外的边可以任意赋值。
+
+证明：
+
+我们任取一条生成树外的边权为 $x$ 的边 $(l, r)$，只要令生成树上从 $l$ 到 $r$ 的路径的所有边异或上 $x$，就可以抵消掉这条边。
+
+性质 $3$：给出一颗生成树和每个节点的点权，要么无解，要么生成树的边的赋值方案是唯一的。
+
+证明：
+
+我们给生成树任意指定一个根节点，对于每一个叶子节点，从它到父节点的边的边权只能为叶子节点的点权；对于每一个非叶子节点，从它到儿子的边的边权已经算出，只剩从它到父节点的边的边权未固定，依靠它的点权，就可以把边权算出；对于根节点，从它到儿子的边的边权已经算出，直接判断它的边权的异或和是否等于点权即可。
+
+所以我们只要求出二分图的任意一颗生成树，把生成树外的格子任意赋值，使用dfs确定生成树上的边权，最后记得检查一下有没有重复的格子，就做完了。
+
+```cpp
+/*
+下面是一些变量的解释
+
+int kind[i][j] : 表示格子 (i, j) 的类型
+int wt[i] : 表示编号为 i 的线索权值
+pii p[i][j]
+p[i][j].first : 表示格子 (i, j) 上方的线索编号
+p[i][j].second : 表示格子 (i, j) 左方的线索编号
+递推求出每个kind=4格子的 p[i][j]
+
+vector&lt;array&lt;int, 4&gt;&gt; e;
+起点线索编号，终点线索编号，格子坐标
+以线索编号为点，线索权值为点权，格子为边，建二分图
+
+vector&lt;vector&lt;array&lt;int, 3&gt;&gt;&gt; g;
+first 表示终点线索编号，second 表示格子坐标
+求出二分图的任意一颗生成树
+取了的边vis[i][j]=1
+
+把生成树外的格子(vis[i][j]==0)随机赋值
+cwt[i] : 表示编号为 i 的线索的当前权值
+ewt[i][j] : 表示格子 (i, j) 的权值
+
+*/
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+#define uint unsigned int
+#define pii pair&lt;int, int&gt;
+template &lt;typename T&gt; using vector2 = vector&lt;vector&lt;T&gt;&gt;;
+template &lt;typename T&gt; using MaxHeap = priority_queue&lt;T&gt;;
+template &lt;typename T&gt; using MinHeap = priority_queue&lt;T, vector&lt;T&gt;, greater&lt;T&gt;&gt;;
+#define all(x) (x).begin(), (x).end()
+// #define endl '\n'
+// #define endl &quot; line in : &quot; &lt;&lt; __LINE__ &lt;&lt; endl
+const int N = 205, INF = 1e16, P = 998244353;
+int n, m;
+int kind[N][N], wt[N * N], n2;
+pii p[N][N];
+int fa[N * N];
+int vis[N][N];
+int ewt[N][N], cwt[N * N];
+vector2&lt;array&lt;int, 3&gt;&gt; g;
+mt19937_64 gen((random_device())());
+uint myrand() {
+  uniform_int_distribution&lt;uint&gt; dis(1, (1ll &lt;&lt; 60) - 1);
+  return dis(gen);
+}
+int find(int x) { return x == fa[x] ? x : fa[x] = find(fa[x]); }
+void dfs(int u, int f) {
+  for (auto [v, i, j] : g[u])
+    if (v != f) {
+      dfs(v, u);
+      ewt[i][j] = wt[v] ^ cwt[v];
+      cwt[p[i][j].first] ^= ewt[i][j];
+      cwt[p[i][j].second] ^= ewt[i][j];
+    }
+}
+int getid(int i, int j) { return (i-1)*m + j-1; }
+void test() {
+  memset(wt, 0, sizeof(wt));
+  memset(p, 0, sizeof(p));
+  memset(vis, 0, sizeof(vis));
+  memset(ewt, 0, sizeof(ewt));
+  memset(cwt, 0, sizeof(cwt));
+  n2 = 0;
+  cin &gt;&gt; n &gt;&gt; m;
+  for (int i = 1; i &lt;= n; i++)
+    for (int j = 1; j &lt;= m; j++)
+      cin &gt;&gt; kind[i][j];
+  for (int i = 1; i &lt;= n; i++)
+    for (int j = 1; j &lt;= m; j++)
+      if (kind[i][j] == 1) {
+        int x; cin &gt;&gt; x;
+        n2++, wt[n2] = x, p[i][j].first = n2;
+      }
+      else if (kind[i][j] == 2) {
+        int y; cin &gt;&gt; y;
+        n2++, wt[n2] = y, p[i][j].second = n2;
+      }
+      else if (kind[i][j] == 3) {
+        int x, y; cin &gt;&gt; x &gt;&gt; y;
+        n2++, wt[n2] = x, p[i][j].first = n2;
+        n2++, wt[n2] = y, p[i][j].second = n2;
+      }
+  vector&lt;array&lt;int, 4&gt;&gt; e;
+  for (int i = 1; i &lt;= n; i++)
+    for (int j = 1; j &lt;= m; j++)
+      if (kind[i][j] == 4) {
+        p[i][j] = { p[i-1][j].first, p[i][j-1].second };
+        e.push_back({ p[i][j].first, p[i][j].second, i, j });
+      }
+  g.assign(n2 + 5, {});
+  for (int i = 1; i &lt;= n2; i++)
+    fa[i] = i;
+  for (auto [u, v, i, j] : e) {
+    int fu = find(u), fv = find(v);
+    if (fu != fv) {
+      fa[fv] = fu;
+      g[u].push_back({ v, i, j });
+      g[v].push_back({ u, i, j });
+      vis[i][j] = 1;
+    }
+  }
+  for (int i = 1; i &lt;= n; i++)
+    for (int j = 1; j &lt;= m; j++)
+      if (kind[i][j] == 4 &amp;&amp; vis[i][j] == 0) {
+        ewt[i][j] = myrand();
+        cwt[p[i][j].first] ^= ewt[i][j];
+        cwt[p[i][j].second] ^= ewt[i][j];
+      }
+  dfs(1, -1);
+  if (wt[1] != cwt[1])
+    cout &lt;&lt; -1 &lt;&lt; endl;
+  else {
+    set&lt;int&gt; st;
+    for (int i = 1; i &lt;= n; i++)
+      for (int j = 1; j &lt;= m; j++)
+        if (kind[i][j] == 4) {
+          if (ewt[i][j] == 0 || st.count(ewt[i][j])) {
+            cout &lt;&lt; -1 &lt;&lt; endl;
+            return;
+          }
+          st.insert(ewt[i][j]);
+        }
+    for (int i = 1; i &lt;= n; i++, cout &lt;&lt; endl)
+      for (int j = 1; j &lt;= m; j++)
+        if (kind[i][j] == 4)
+          cout &lt;&lt; ewt[i][j] &lt;&lt; ' ';
+  }
+}
+signed main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  int T; cin &gt;&gt; T; while (T--)
+  test();
+  return 0;
+}
+```
+</pre>
+
+  <script>
+    document.getElementById('content').innerHTML =
+      marked.parse(document.getElementById('p1').innerText);
+    document.getElementById("p1").style.display="none";
+  </script>
+  
+  <script>
+  var flag = 0;
+  function openNav() {
+    if (flag == 0) {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      flag = 1;
+    }
+    else {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      flag = 0;
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+  
+</body>
+</html>
