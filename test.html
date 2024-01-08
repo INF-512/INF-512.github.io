@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="https://inf-512.github.io/">
+  <!-- <base href="https://inf-512.github.io/"> -->
+  <base href="127.0.0.1:8080/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
@@ -66,7 +67,7 @@
   </style>
   
   <!-- 目录样式 -->
-  <style>
+<!--   <style>
     .toc {
       width: 250px;
       height: 100%;
@@ -75,9 +76,9 @@
       left: calc(50% + 400px);
       background-color: #f0f0f0;
     }
-  </style>
+  </style> -->
   
-  <!-- 无序列表样式 -->
+  <!-- 列表样式 -->
   <style>
     ul {
       display: none;
@@ -90,18 +91,18 @@
 <div class="sidebar">
 <ul id="u3">
 <li onclick="replace_ul('u3', 'u2')">abc</li>
-<li><a href="/test.html?src=/article\abc\c.md&pos=u3">c</a></li>
+<li><a href="/test.html?src=/article\abc\c.md?ver=3951388723&pos=u3">c</a></li>
 </ul>
 <ul id="u2">
 <li onclick="replace_ul('u2', 'u1')">article</li>
-<li><a href="/test.html?src=/article\a.md&pos=u2">a</a></li>
-<li onclick="replace_ul('u2', 'u3')">/article\abc</li>
-<li><a href="/test.html?src=/article\b.md&pos=u2">b</a></li>
+<li><a href="/test.html?src=/article\a.md?ver=2690165124&pos=u2">a</a></li>
+<li onclick="replace_ul('u2', 'u3')">abc</li>
+<li><a href="/test.html?src=/article\b.md?ver=2262535250&pos=u2">b</a></li>
 </ul>
 <ul id="u1">
 <li onclick="replace_ul('u1', 'u1')"></li>
-<li onclick="replace_ul('u1', 'u2')">/article</li>
-<li><a href="/test.html?src=/home.md&pos=u1">home</a></li>
+<li onclick="replace_ul('u1', 'u2')">article</li>
+<li><a href="/test.html?src=/home.md?ver=1431026427&pos=u1">home</a></li>
 </ul>
 </div>
 <!-- 目录区域 -->
@@ -137,6 +138,8 @@
     document.getElementById(u1).style.display="none";
     document.getElementById(u2).style.display="block";
   }
+  console.log(getParameterByName("src"));
+  console.log(getParameterByName("pos"));
   showMarkdownByName(getParameterByName("src"));
   document.getElementById(getParameterByName("pos")).style.display="block";
 </script>

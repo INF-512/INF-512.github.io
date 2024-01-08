@@ -3,6 +3,7 @@ using namespace std;
 namespace fs = std::filesystem;
 using namespace std::chrono;
 using namespace std::chrono_literals;
+mt19937 gen((random_device())());
 string all;
 int utot;
 int dfs(fs::path p, int fid) {
@@ -10,18 +11,18 @@ int dfs(fs::path p, int fid) {
   int cid = ++utot;
   // cout << cid << ' ' << fid << ' ' << p.string() << endl;
   cstr += format("<ul id=\"u{}\">\n", cid);
-  cstr += format("<li onclick=\"replace_ul('u{}', 'u{}')\">{}</li>\n", cid, fid, p.filename().string());
+  cstr += format("<li onclick=\"replace_ul('u{}', 'u{}')\">{}</li>\n", cid, fid, p.stem().string());
   for (const auto &file : fs::directory_iterator(p)) {
     // cout << cid << ' ' << file.path() << endl;
     if (file.is_directory()) {
       // cout << cid << ' ' << file.path() << endl;
       if (cid != 1 || file.path().filename() == "article") {
         int nid = dfs(file.path(), cid);
-        cstr += format("<li onclick=\"replace_ul('u{}', 'u{}')\">{}</li>\n", cid, nid, file.path().string());
+        cstr += format("<li onclick=\"replace_ul('u{}', 'u{}')\">{}</li>\n", cid, nid, file.path().stem().string());
       }
     }
     else if (file.is_regular_file() && file.path().extension() == ".md") {
-      cstr += format("<li><a href=\"/test.html?src={}&pos=u{}\">{}</a></li>\n", file.path().string(), cid, file.path().stem().string());
+      cstr += format("<li><a href=\"/test.html?src={}?ver={}&pos=u{}\">{}</a></li>\n", file.path().string(), gen(), cid, file.path().stem().string());
     }
   }
   cstr += "</ul>\n";
