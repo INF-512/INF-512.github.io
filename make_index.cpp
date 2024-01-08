@@ -40,7 +40,7 @@ int dfs(fs::path p, int fid) {
   all += cstr;
   return cid;
 }
-int main() {
+int main() 
   system("chcp 65001");
   dfs("/", 1);
   cout << all << endl;
