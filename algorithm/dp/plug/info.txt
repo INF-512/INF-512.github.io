@@ -1,0 +1,3 @@
+name=插头DP
+type=directory
+rank=1001

@@ -1,6 +1,6 @@
 <ul id="u-algorithm-dp-plug-">
 <li onclick="replace_ul('u-algorithm-dp-plug-', 'u-algorithm-dp')">&lt;插头DP</li>
-<li><a href="/algorithm/dp/plug/longest_path">最长路问题</a></li>
+<li><a href="/algorithm/dp/plug/longest_path">P1001</a></li>
 </ul>
 <ul id="u-algorithm-dp-">
 <li onclick="replace_ul('u-algorithm-dp-', 'u-algorithm')">&lt;动态规划</li>
