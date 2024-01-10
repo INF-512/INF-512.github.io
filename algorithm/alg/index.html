@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>INF Wiki</title>
+  
+  <!-- 加载 MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\(","\)"] ],
+        displayMath: [ ['$$','$$'], ["\[","\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+        ignoreClass: 'crayon-.*'
+      },
+      'HTML-CSS': {
+        showMathMenu: false
+      }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+  
+  <!-- 加载 Markdown 转 HTML 的 marked -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+  <script src="/lib/markdown/marked.min.js"></script>
+  <!-- marked.parse("Markdown text");  -->
+  
+  <!-- 加载代码高亮 -->
+  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
+  <script src="/lib/highlight/highlight.min.js"></script>
+  <!-- hljs.highlightAll(); -->
+  
+  <link rel="stylesheet" type="text/css" href="/global.css"/>
+  
+</head>
+<body>
+<!-- 侧边栏区域 -->
+<div id="sidebar"></div>
+<!-- Markdown 文本区域 -->
+<div id="markdown_text"></div>
+<script src="/global.js"></script>
+</body>
+</html>

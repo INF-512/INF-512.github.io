@@ -1,0 +1,36 @@
+/* 设置代码字体 */
+@font-face {
+  font-family: abc;
+  src: url("/lib/ttf/monaco.ttf");
+}
+code { font-family: "abc", monospace; }
+
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+/* markdown 文本区域样式 */
+#markdown_text {
+  max-width:800px;
+  word-break: break-all;
+  word-wrap:break-word;
+  margin: 0 auto;
+}
+
+/* 侧边栏样式 */
+#sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 50px;
+  right: calc(50% + 400px);
+/*      background-color: #f0f0f0;*/
+}
+
+/* 列表样式 */
+ul {
+  display: none;
+  list-style: none;
+}

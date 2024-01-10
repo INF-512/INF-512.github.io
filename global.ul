@@ -1,0 +1,23 @@
+<ul id="u-algorithm-">
+<li onclick="replace_ul('u-algorithm-', 'u-')">&lt;算法</li>
+<li><a href="/algorithm/alg">alg</a></li>
+</ul>
+<ul id="u-data_structure-">
+<li onclick="replace_ul('u-data_structure-', 'u-')">&lt;数据结构</li>
+<li><a href="/data_structure/data">data</a></li>
+</ul>
+<ul id="u-other-">
+<li onclick="replace_ul('u-other-', 'u-')">&lt;其他</li>
+<li><a href="/other/other">other</a></li>
+</ul>
+<ul id="u-problem_list-">
+<li onclick="replace_ul('u-problem_list-', 'u-')">&lt;题库</li>
+<li><a href="/problem_list/P1001">P1001</a></li>
+</ul>
+<ul id="u-">
+<li><a href="/home">首页</a></li>
+<li onclick="replace_ul('u-', 'u-algorithm-')">算法&gt;</li>
+<li onclick="replace_ul('u-', 'u-data_structure-')">数据结构&gt;</li>
+<li onclick="replace_ul('u-', 'u-problem_list-')">题库&gt;</li>
+<li onclick="replace_ul('u-', 'u-other-')">其他&gt;</li>
+</ul>
