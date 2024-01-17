@@ -1,3 +1,0 @@
-name=alg
-type=article
-rank=1001

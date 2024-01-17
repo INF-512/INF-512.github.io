@@ -9,7 +9,6 @@
 <ul id="u-algorithm-">
 <li onclick="replace_ul('u-algorithm-', 'u-')">&lt;算法</li>
 <li onclick="replace_ul('u-algorithm-', 'u-algorithm-dp-')">动态规划&gt;</li>
-<li><a href="/algorithm/alg">alg</a></li>
 </ul>
 <ul id="u-data_structure-">
 <li onclick="replace_ul('u-data_structure-', 'u-')">&lt;数据结构</li>
@@ -18,6 +17,7 @@
 <ul id="u-other-">
 <li onclick="replace_ul('u-other-', 'u-')">&lt;其他</li>
 <li><a href="/other/other">other</a></li>
+<li><a href="/other/unordered_map_TLE">在使用 unordered_map 时应该如何避免 TLE</a></li>
 </ul>
 <ul id="u-problem_list-">
 <li onclick="replace_ul('u-problem_list-', 'u-')">&lt;题库</li>
