@@ -17,8 +17,10 @@ function loadMarkdownFile(filename) {
   fetch(filename)
   .then(response => response.text())
   .then(data => {
-    document.getElementById("markdown_text").innerHTML = marked.parse(data);
-    console.log(marked.parse(data));
+    var markdown_text = document.getElementById("markdown_text");
+    markdown_text.innerHTML = data;
+    console.log(markdown_text.innerHTML);
+    texme.renderPage();
     hljs.highlightAll();
   })
   .catch(error => {
@@ -41,5 +43,5 @@ function loadGlobalUl(filename) {
     console.error("读取文件时发生错误", error);
   });
 }
-loadMarkdownFile("./text.md");
-loadGlobalUl("/global.ul");
+// loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));
+// loadGlobalUl("/global.ul");

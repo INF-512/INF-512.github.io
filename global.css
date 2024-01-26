@@ -1,21 +1,25 @@
 /* 设置代码字体 */
 @font-face {
   font-family: abc;
-  src: url("/lib/ttf/monaco.ttf");
+  src: url("/lib/ttf/CascadiaCode-Regular.ttf");
 }
 code { font-family: "abc", monospace; }
 
 body {
-  font-family: sans-serif;
+  font-family: "abc";
   margin: 0 auto;
 }
 
 /* markdown 文本区域样式 */
-#markdown_text {
+main {
   max-width:800px;
   word-break: break-all;
   word-wrap:break-word;
   margin: 0 auto;
+}
+
+img {
+  max-width:800px;
 }
 
 /* 侧边栏样式 */

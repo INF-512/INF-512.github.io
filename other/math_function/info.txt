@@ -1,0 +1,3 @@
+name=常用数论函数学习笔记
+type=article
+rank=1002

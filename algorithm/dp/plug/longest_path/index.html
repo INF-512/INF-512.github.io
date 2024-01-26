@@ -6,7 +6,7 @@
   <title>INF Wiki</title>
   
   <!-- 加载 MathJax -->
-  <script type="text/x-mathjax-config">
+  <!-- <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       showProcessingMessages: false,
       messageStyle: "none",
@@ -24,8 +24,22 @@
     });
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script> -->
+  <script>
+    MathJax = {
+      tex:{
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+      },
+      svg:{
+        fontCache: 'global'
+      }
+    };
   </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <!-- MathJax.typeset(); -->
   
   <!-- 加载 Markdown 转 HTML 的 marked -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
