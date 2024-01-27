@@ -1,3 +1,0 @@
-name=other
-type=article
-rank=1001

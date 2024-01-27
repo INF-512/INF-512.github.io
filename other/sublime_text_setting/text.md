@@ -2,25 +2,25 @@
 
 # 前言
 
-Sublime Text 做到了真正的自定义，哪里不顺眼就改哪里，没有你做不到的，只有你想不到的。
+`Sublime Text` 做到了真正的自定义，哪里不顺眼就改哪里，没有你做不到的，只有你想不到的。
 
 # 最终效果
 
-![](./p1.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p1.png)
 
 # 相关资源
 
-sublime_text_build_4169_x64_setup.exe
+`sublime_text_build_4169_x64_setup.exe`
 
-链接：https://pan.baidu.com/s/1h7pSQMR-xhlPYLAL9eNvdw 
+链接：`https://pan.baidu.com/s/1h7pSQMR-xhlPYLAL9eNvdw `
 
-提取码：7rxg
+提取码：`7rxg`
 
-Sublime Text Background Image.7z
+`Sublime Text Background Image.7z`
 
-链接：https://pan.baidu.com/s/1afw3nMLADxHciEi5SPKHEQ 
+链接：`https://pan.baidu.com/s/1afw3nMLADxHciEi5SPKHEQ `
 
-提取码：l9e4
+提取码：`l9e4`
 
 # 安装 `Sublime Text`
 
@@ -28,7 +28,7 @@ Sublime Text Background Image.7z
 
 安装完后在 `C:\Sublime Text` 目录下新建一个名为 `Data` 的文件夹。
 
-![](./p2.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p2.png)
 
 # 注册
 
@@ -52,7 +52,7 @@ c9c6 4005 0148
 85c9
 ```
 
-![](./p3.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p3.png)
 
 点击 `Replace`，然后保存，退出。
 
@@ -62,11 +62,11 @@ c9c6 4005 0148
 
 按下 `Ctrl+Shift+P`，输入 install，选中 `Install Package Control`，然后回车，等待安装。
 
-![](./p4.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p4.png)
 
 弹出窗口 `Package Control was successfully installed` 表示安装成功。
 
-![](./p5.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p5.png)
 
 # 用户配置文件
 
@@ -122,7 +122,7 @@ c9c6 4005 0148
 
 按下 `Ctrl+Shift+P`，输入 `install`，选中 `Package Control: Install Package`，然后回车，等到出现搜索框，然后输入插件的名称回车进行安装。
 
-![](./p7.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p7.png)
 
 ## 常用插件
 
@@ -144,13 +144,13 @@ Transparency：设置背景透明度。
 
 上述插件建议全部安装，安装完后如下图。
 
-![](./p8.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p8.png)
 
 # 更换主题和配色
 
-主题（theme）包括标题栏，覆盖面板，侧边栏，选项卡，状态栏，小部件面板，滚动条等等。
+主题（Theme）包括标题栏，覆盖面板，侧边栏，选项卡，状态栏，小部件面板，滚动条等等。
 
-配色（color scheme）包括代码颜色，代码背景色等等。
+配色（Color Scheme）包括代码颜色，代码背景色等等。
 
 ## 更换主题
 
@@ -160,7 +160,7 @@ Transparency：设置背景透明度。
 
 按下 `Ctrl+Shift+P`，输入 'ui color'，选中 `UI: Select Color Scheme`，回车，选择你喜欢的配色，回车（这里我选的是 `Darkmatter`）。
 
-![](./p9.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p9.png)
 
 一般情况下主题和配色是成套的，例如上面的 `Material-Theme` 主题和 `Material-Theme` 配色，`Darkmatter` 主题和 `Darkmatter` 配色。
 
@@ -168,7 +168,7 @@ Transparency：设置背景透明度。
 
 按下 `Ctrl+Shift+P`，输入 `install theme`，选中 `Colorsublime: Install Theme`，回车，选择你喜欢的配色，回车。
 
-![](./p10.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p10.png)
 
 如果不满意可以自行安装别的 `Sublime Text` 主题。
 
@@ -178,7 +178,7 @@ Transparency：设置背景透明度。
 
 这里拿 `Material-Theme` 主题和 `Darkmatter` 配色为例，绿色的主题背景色和深蓝色的代码背景色不搭，需要把绿色改为深蓝色。
 
-![](./p37.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p37.png)
 
 按下 `Ctrl+Shift+P`，输入 `prvor`，选中 `PackageResourceViewer: Open Resource`，回车，输入 `material`，选中 `Material Theme` 回车，输入 `sublime-theme`，选中 `Material-Theme.sublime-theme`，回车。
 
@@ -202,11 +202,11 @@ WIDGET PANEL：小部件面板（`Ctrl+F` 以及类似的面板）。
 
 SCROLLBARS：滚动条。
 
-![](./p12.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p12.png)
 
 如果不知道代码是什么意思，可以直接删掉，保存，然后看看界面的变化。
 
-Material-Theme.sublime-theme 文件改动信息如下：
+`Material-Theme.sublime-theme` 文件改动信息如下：
 
 ```
 @@ -13,7 +13,7 @@
@@ -648,9 +648,9 @@ Material-Theme.sublime-theme 文件改动信息如下：
 
 ## 修改前后效果
 
-![](./p13.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p13.png)
 
-![](./p14.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p14.png)
 
 这里有一个小 bug，如果你覆盖面板的文本输入框背景色还是绿色的，那么你可以这么做：
 
@@ -699,31 +699,31 @@ Material-Theme.sublime-theme 文件改动信息如下：
 
 安装完后，打开 `FontForge` 的根目录，用 `Sublime Text` 打开 `fontforge.bat`，将第 9 行替换为 `set LANGUAGE=zh_CN`，然后保存退出。
 
-![](./p15.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p15.png)
 
 准备好一种中文字体和一种英文字体，这里以新宋体和 `Courier New` 为例。
 
-![](./p16.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p16.png)
 
 用 `FontForge` 打开 `cour.ttf`。
 
-![](./p17.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p17.png)
 
 依次点击 `元素(L)`，`字体信息(F)`，把字体名，字族名，人类可读名称都改为你喜欢的名字，这里以 `myfont` 为例。
 
-![](./p18.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p18.png)
 
 点开 `通用`，把 `M全字大小(E)` 改为 2048。
 
-![](./p19.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p19.png)
 
 点开 `OS/2`，`特征`，把全部特征都改为任何。
 
-![](./p20.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p20.png)
 
 点击确定和更改。
 
-![](./p21.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p21.png)
 
 先不要关闭上面的窗口，现在用 `FontForge` 打开 `simsun.ttc`。
 
@@ -733,31 +733,31 @@ Material-Theme.sublime-theme 文件改动信息如下：
 
 点击 `文件(F)`，`另存为(A)`，将文件另存到上面的文件夹中，然后关闭当前窗口。
 
-![](./p22.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p22.png)
 
 回到打开 `cour.ttf` 文件的窗口，点击 `元素(L)`，`合并字体(M)`，选中刚刚另存好的 `NSimSun.sfd`。
 
-![](./p23.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p23.png)
 
 连续确定两次，然后点击 `文件(F)`，`生成字体(G)`，按照下面的图片进行配置。
 
-![](./p24.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p24.png)
 
 最后，点击 `Generate` 生成字体。
 
 双击 `myfont.ttf`，然后点击安装。
 
-![](./p25.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p25.png)
 
 安装完毕后，重启计算机，打开 `Sublime Text`，然后按下 `Ctrl+Shift+P`，输入 `settings`，选中 `Preferences: Settings`，回车，将 `"font_face": "Cascadia Code",`，替换成 `"font_face": "myfont",`，大功告成。
 
-![](./p26.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p26.png)
 
 # 设置背景透明度
 
 打开 `SublimeTextTrans` 的配置文件。
 
-![](./p27.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p27.png)
 
 调整透明度的快捷键是 `Ctrl+Shift+1` 到 `Ctrl+Shift+6`，数字越小越透明，大家根据需要调整。
 
@@ -767,17 +767,19 @@ Material-Theme.sublime-theme 文件改动信息如下：
 
 首先选中 `\sum_{}^{}`，按下 `Ctrl+Shift+P`，输入 `smms`，选中 `SnippetMaker: Make Snippet`，回车，然后在 `Trigger(触发单词)` 中输入 `sum`，在 `Description(描述)` 中输入 `latex sum 符号`，`Scope(生效区域)` 这个可以改也可以不改，这里我不改直接回车，最后是文件名，这里我也是直接回车。
 
-![](./p28.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p28.png)
 
 然后出现下面这个文件。
 
-![](./p29.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p29.png)
 
 ## 光标移动
 
-我们希望光标停在第 1 对花括号内，然后按下 `Tab` 后，光标移动到第 2 对花括号内，再按下 `tab` 后，光标移动到末尾，我们可以在第 1 对花括号内插入 \$1，然后在第 2 对花括号内插入 \$2，末尾的 \$3 可以省略不写，完成后，输入 `sum` 然后按 `Tab` 就会出现 `\sum_{}^{}`。
+\begin{md}
+我们希望光标停在第 `1` 对花括号内，然后按下 `Tab` 后，光标移动到第 `2` 对花括号内，再按下 `tab` 后，光标移动到末尾，我们可以在第 `1` 对花括号内插入 `$1`，然后在第 `2` 对花括号内插入 `$2`，末尾的 `$3` 可以省略不写，完成后，输入 `sum` 然后按 `Tab` 就会出现 `\sum_{}^{}`。
+\end{md}
 
-![](./p30.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p30.png)
 
 # C++ 运行环境配置
 
@@ -838,7 +840,7 @@ command: build {"build_system": "Packages/C++/C++ Single File.sublime-build", "c
 
 然后就搞定了。
 
-![](./p31.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p31.png)
 
 # 常用快捷键
 
@@ -910,23 +912,23 @@ Ctrl+P：搜索框
 
 在 `Sublime Text Background Image` 目录下打开 `cmd`，输入 `gcc -v`，查看 `gcc` 版本号，请确保你的 `gcc` 版本在 `13.0.0` 以上。
 
-![](./p32.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p32.png)
 
 输入 `make`，回车，等待编译完成。
 
-![](./p33.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p33.png)
 
 然后运行 `test.exe`。
 
-![](./p34.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p34.png)
 
 成功设置好背景图片。
 
-如果你的图片错位了，可以把 `test.cpp` 第 21 行的 1.5 改为 1.0，然后重新编译。
+如果你的图片错位了，可以把 test.cpp 第 21 行的 1.5 改为 1.0，然后重新编译。
 
-这里的 1.5 跟 `系统>屏幕>缩放和布局` 内的缩放选项有关，例如这里我的电脑的缩放是 150%。
+这里的 1.5 跟系统>屏幕>缩放和布局的缩放有关，例如这里我的电脑的缩放是 150%。
 
-![](./p36.png)
+![](https://inf-512.github.io/other/sublime_text_setting/p36.png)
 
 ## 小提示
 
@@ -944,4 +946,4 @@ Ctrl+P：搜索框
 
 最后，送给大家一只可爱的心海。
 
-![](./p35.jpg)
+![](https://inf-512.github.io/other/sublime_text_setting/p35.jpg)
