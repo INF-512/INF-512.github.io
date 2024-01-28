@@ -5,6 +5,7 @@
 <ul id="u-algorithm-dp-">
 <li onclick="replace_ul('u-algorithm-dp-', 'u-algorithm')">&lt;动态规划</li>
 <li onclick="replace_ul('u-algorithm-dp-', 'u-algorithm-dp-plug-')">插头DP&gt;</li>
+<li><a href="/algorithm/dp/slope_opt">斜率优化</a></li>
 </ul>
 <ul id="u-algorithm-math-number_theory-">
 <li onclick="replace_ul('u-algorithm-math-number_theory-', 'u-algorithm-math')">&lt;数论</li>

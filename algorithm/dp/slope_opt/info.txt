@@ -1,0 +1,3 @@
+name=斜率优化
+type=article
+rank=1002
