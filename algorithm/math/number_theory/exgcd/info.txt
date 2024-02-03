@@ -1,0 +1,3 @@
+name=二元一次方程解的个数分析
+type=article
+rank=1001

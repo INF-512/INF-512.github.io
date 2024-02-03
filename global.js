@@ -22,6 +22,7 @@ function loadMarkdownFile(filename) {
     console.log(markdown_text.innerHTML);
     texme.renderPage();
     hljs.highlightAll();
+    console.log(markdown_text.innerHTML);
   })
   .catch(error => {
     console.error("读取文件时发生错误", error);

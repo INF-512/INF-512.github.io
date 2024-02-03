@@ -34,7 +34,7 @@ img {
 }
 
 /* 列表样式 */
-ul {
+#sidebar ul {
   display: none;
   list-style: none;
 }

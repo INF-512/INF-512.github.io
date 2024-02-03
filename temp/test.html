@@ -1,53 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>aaa</title>
-  
-  <!-- latex+markdown -->
-  <script>window.texme = { style: 'none', renderOnLoad: false }</script>
-  <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
-  
-  <!-- code highlight -->
-  <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
-  <script src="/lib/highlight/highlight.min.js"></script>
-  
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
 </head>
 <body>
-<textarea id="markdown_text">
-
-# Euler's Identity
-
-In mathematics, **Euler's identity** is the equality
-$$ e^{i \pi} + 1 = 0. $$
-
-## Explanation
-
-Euler's identity is a special case of Euler's formula from complex
-analysis, which states that for any real number $ x $,
-$$ e^{ix} = \cos x + i \sin x. $$
-
-</textarea>
-<button onclick='loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));'>click me</button>
-<script>
-  function loadMarkdownFile(filename) {
-    fetch(filename)
-    .then(response => response.text())
-    .then(data => {
-      var markdown_text = document.getElementById("markdown_text");
-      console.log(markdown_text.innerHTML);
-      markdown_text.innerHTML = data;
-      console.log(markdown_text.innerHTML);
-      console.log(data);
-      texme.renderPage();
-      hljs.highlightAll();
-    })
-    .catch(error => {
-      console.error("读取文件时发生错误", error);
-    });
-  }
-  // loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));
-</script>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // document.getElementById('content').innerHTML =
+      // marked.parse('# Marked in the browser\n\nRendered by **marked**.');
+    function loadMarkdownFile(filename) {
+      fetch(filename)
+      .then(response => response.text())
+      .then(data => {
+        var markdown_text = document.getElementById("content");
+        console.log(data);
+        markdown_text.innerHTML = marked.parse(data);
+        console.log(markdown_text.innerHTML);
+      })
+      .catch(error => {
+        console.error("读取文件时发生错误", error);
+      });
+    }
+    loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));
+  </script>
 </body>
 </html>
