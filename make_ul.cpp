@@ -44,13 +44,14 @@ Info get_info(fs::path p) {
 string get_uid(string s) {
   replace(all(s), '\\', '/');
   replace(all(s), '/', '-');
+  if (s.back() != '-')
+    s += '-';
   return s;
 }
 string dfs(fs::path p) {
   string cstr;
   // cout << cid << ' ' << fid << ' ' << p.string() << endl;
   string fid = get_uid(p.parent_path().string()), cid = get_uid(p.string());
-  if (cid.back() != '-') cid += '-';
   cstr += format("<ul id=\"u{}\">\n", cid);
   if (p != "/") {
     Info info = get_info(p);

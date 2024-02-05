@@ -160,4 +160,4 @@ $2n$ 个高矮不同的人，排成两排，每排必须是从矮到高排列，
 
 感谢你阅读本文，请收下这只可爱的琳妮特。
 
-[![](./p7.jpg)](/algorithm/math/combinatorics/catalan/)
+![](./p7.jpg)

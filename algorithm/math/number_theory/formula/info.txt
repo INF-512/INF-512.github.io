@@ -1,0 +1,3 @@
+name=数论常用公式
+type=article
+rank=2000

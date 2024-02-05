@@ -1,3 +1,0 @@
-name=temp
-type=article
-rank=2000

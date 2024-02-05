@@ -5,60 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>INF Wiki</title>
   
-  <!-- 加载 MathJax -->
-  <!-- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      showProcessingMessages: false,
-      messageStyle: "none",
-      extensions: ["tex2jax.js"],
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\(","\)"] ],
-        displayMath: [ ['$$','$$'], ["\[","\]"] ],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
-        ignoreClass: 'crayon-.*'
-      },
-      'HTML-CSS': {
-        showMathMenu: false
-      }
-    });
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-  </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script> -->
-  <script>
-    MathJax = {
-      tex:{
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-      },
-      svg:{
-        fontCache: 'global'
-      }
-    };
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  <!-- MathJax.typeset(); -->
+  <!-- global css -->
+  <link rel="stylesheet" type="text/css" href="/global.css"/>
   
-  <!-- 加载 Markdown 转 HTML 的 marked -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
-  <script src="/lib/markdown/marked.min.js"></script>
-  <!-- marked.parse("Markdown text");  -->
+  <!-- latex+markdown -->
+  <script>window.texme = { style: 'none', renderOnLoad: false }</script>
+  <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
   
-  <!-- 加载代码高亮 -->
+  <!-- code highlight -->
   <link rel="stylesheet" type="text/css" href="/lib/highlight/styles/atom-one-light.css"/>
   <script src="/lib/highlight/highlight.min.js"></script>
-  <!-- hljs.highlightAll(); -->
   
-  <link rel="stylesheet" type="text/css" href="/global.css"/>
+  <script src="/global.js"></script>
+  
+  <script>
+    window.onload = function() {
+      // 在页面加载完毕后执行的代码
+      console.log('页面加载完毕！');
+      loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));
+      loadGlobalUl("/global.ul" + "?ver=" + Math.floor(Math.random() * 1000000000));
+    };
+  </script>
   
 </head>
 <body>
-<!-- 侧边栏区域 -->
+
+<!-- Markdown Text -->
+<textarea id="markdown_text"></textarea>
+
+<!-- sidebar -->
 <div id="sidebar"></div>
-<!-- Markdown 文本区域 -->
-<div id="markdown_text"></div>
-<script src="/global.js"></script>
+
+<!-- <button onclick='loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));'>click me</button> -->
+
 </body>
 </html>

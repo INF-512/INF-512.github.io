@@ -1,0 +1,3 @@
+name=卡特兰数递推式的应用
+type=article
+rank=1001

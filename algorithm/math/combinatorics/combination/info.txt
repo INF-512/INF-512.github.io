@@ -1,0 +1,3 @@
+name=排列组合
+type=article
+rank=1001
