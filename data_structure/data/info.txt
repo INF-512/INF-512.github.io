@@ -1,3 +1,0 @@
-name=data
-type=article
-rank=1001

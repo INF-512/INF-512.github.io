@@ -30,9 +30,13 @@
 <li onclick="replace_ul('u-algorithm-', 'u-algorithm-dp-')">动态规划&gt;</li>
 <li onclick="replace_ul('u-algorithm-', 'u-algorithm-math-')">数学&gt;</li>
 </ul>
+<ul id="u-data_structure-segment_tree-">
+<li onclick="replace_ul('u-data_structure-segment_tree-', 'u-data_structure-')">&lt;线段树</li>
+<li><a href="/data_structure/segment_tree/2d_segment_tree">二维线段树详解</a></li>
+</ul>
 <ul id="u-data_structure-">
 <li onclick="replace_ul('u-data_structure-', 'u-')">&lt;数据结构</li>
-<li><a href="/data_structure/data">data</a></li>
+<li onclick="replace_ul('u-data_structure-', 'u-data_structure-segment_tree-')">线段树&gt;</li>
 </ul>
 <ul id="u-other-">
 <li onclick="replace_ul('u-other-', 'u-')">&lt;其他</li>
