@@ -6,6 +6,8 @@
 
 2024/2/6 [每日一图](/daily_picture/)栏目上线。
 
+2024/2/9 每日一图栏目[停更](/other/daily_picture_stop/)。
+
 ## 联系方式
 
 QQ Mail: 2716182349@qq.com

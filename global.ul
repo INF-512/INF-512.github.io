@@ -42,13 +42,13 @@
 <li onclick="replace_ul('u-other-', 'u-')">&lt;其他</li>
 <li><a href="/other/unordered_map_tle">在使用 unordered_map 时应该如何避免 TLE</a></li>
 <li><a href="/other/sublime_text_setting">如何把 Sublime Text 打造成最炫酷的代码编辑器</a></li>
+<li><a href="/other/daily_picture_stop">每日一图停更通知</a></li>
 </ul>
 <ul id="u-problem_list-">
 <li onclick="replace_ul('u-problem_list-', 'u-')">&lt;题库</li>
 </ul>
 <ul id="u-">
 <li><a href="/home">首页</a></li>
-<li><a href="/daily_picture">每日一图</a></li>
 <li onclick="replace_ul('u-', 'u-algorithm-')">算法&gt;</li>
 <li onclick="replace_ul('u-', 'u-data_structure-')">数据结构&gt;</li>
 <li onclick="replace_ul('u-', 'u-problem_list-')">题库&gt;</li>
