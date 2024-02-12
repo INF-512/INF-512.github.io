@@ -1,0 +1,3 @@
+name=没有资源怎么自学信竟
+type=article
+rank=1005

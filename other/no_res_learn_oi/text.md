@@ -29,7 +29,7 @@ C++参考手册（chm离线版）：https://github.com/myfreeer/cppreference2msh
 
 这个阶段我只推荐在洛谷刷题，因为如果遇到不会的题，可以直接查看很多题解，一篇题解没看懂就换另一篇，还是看不懂就百度，不怕看不懂，不怕学不会。
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p2.png)
+![](./p2.png)
 
 # 第三阶段：思维训练
 
@@ -41,15 +41,15 @@ AtCoder：https://atcoder.jp/
 
 这里我只推荐刷 Codeforces 的构造题（constructive algorithms），难度设置为 1600 分以下，这个难度可以根据需要调整。
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p3.png)
+![](./p3.png)
 
 如果不会写可以百度或者点击右下角的 Tutorial(en) 看题解。
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p5.png)
+![](./p5.png)
 
 Codeforces 会定期举办比赛，时间通常是当天的晚上 10:35，比赛持续 2 小时。
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p4.png)
+![](./p4.png)
 
 AtCoder 的比赛和 Codeforces 类似，这里不再过多介绍。
 
@@ -67,9 +67,9 @@ OI Wiki：https://oi-wiki.org/
 
 如果你已经学完 NOI 大纲的所有知识点，那么就去洛谷挑战紫题和黑题吧，有很多意想不到的惊喜在那里等着你。
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p6.png)
+![](./p6.png)
 
-![](https://inf-512.github.io/other/no_res_learn_oi/p7.png)
+![](./p7.png)
 
 # 学习资源
 

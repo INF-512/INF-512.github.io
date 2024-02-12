@@ -44,6 +44,7 @@
 <li><a href="/other/sublime_text_setting">如何把 Sublime Text 打造成最炫酷的代码编辑器</a></li>
 <li><a href="/other/daily_picture_stop">每日一图停更通知</a></li>
 <li><a href="/other/cpp_build_run_setting">C++编译运行环境配置</a></li>
+<li><a href="/other/no_res_learn_oi">没有资源怎么自学信竟</a></li>
 </ul>
 <ul id="u-problem_list-">
 <li onclick="replace_ul('u-problem_list-', 'u-')">&lt;题库</li>
