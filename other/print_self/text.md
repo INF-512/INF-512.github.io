@@ -1,30 +1,8 @@
-解一道题，我该怎么做
-
-读三遍：
-you have to throw yourself into a problem for hours, and try everything you can try.
-you have to throw yourself into a problem for hours, and try everything you can try.
-you have to throw yourself into a problem for hours, and try everything you can try.
-
-1. 最简单直接的做法是什么
-2. 找一些特殊的点
-3. 优先保证做法的正确性
-4. int溢出，数组越界，变量初始化，特殊情况(n=1?)
-7. 容易陷入死路，不得不放弃复杂的做法
-8. 需要构造一个具体的解，真的只能打表观察了。
-9. 每周打比赛，赛后写题解
-10. 数形结合
-
-强制删除文件/文件夹 rd/s/q D:\Program\anaconda3
-
-ostream& operator << (ostream &out, const pii &p) {
-  return out << '{' << p.first << ',' << p.second << '}';
-}
-
 如何写一个程序打印自己的源代码
 
 # 前言
 
-在上课的时候，突然想起的很久以前的一个有趣的问题。
+在上课的时候，突然想起很久以前的一个有趣的问题。
 
 # 题目描述
 
@@ -187,6 +165,4 @@ signed main() {
 }
 ```
 
-如果有其他更好的做法，欢迎在评论区提出。
-
-最后，感谢你的阅读。
+如果有其他更好的做法，欢迎在评论区提出，感谢你的阅读。

@@ -1,0 +1,3 @@
+name=如何写一个程序打印自己的源代码
+type=article
+rank=1006
