@@ -1,4 +1,4 @@
 cd e:
-git add .
+git add e:/.
 git commit -m "updata"
 git push
