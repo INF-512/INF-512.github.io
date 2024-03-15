@@ -182,7 +182,6 @@ signed main() {
   f << "</table>" << endl;
   f << "<div style=\"text-align:center;\">made by " "<a href=\"https://inf-512.github.io/\" target=\"_blank\">INF_512</a>" "</div>" << endl;
   f.close();
-  system("rd/s/q E:/$RECYCLE.BIN");
   system("D:/Program/Git/git-bash.exe --cd-to-home -c 'E:/oj_contest_calendar/pushup.bat'");
   return 0;
 }
