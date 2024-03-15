@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OJ Contest Calendar</title>
+  
+  <!-- global css -->
+  <link rel="stylesheet" type="text/css" href="/global.css"/>
+  
+  <!-- latex+markdown -->
+  <script src="/lib/markdown/marked.min.js"></script>
+  
+  <script>
+    function loadMarkdownFile(filename) {
+      fetch(filename)
+      .then(response => response.text())
+      .then(data => {
+        var markdown_text = document.getElementById("markdown_text");
+        console.log(data);
+        markdown_text.innerHTML = marked.parse(data);
+        console.log(markdown_text.innerHTML);
+      })
+      .catch(error => {
+        console.error("读取文件时发生错误", error);
+      });
+    }
+  </script>
+  
+  <script>
+    window.onload = function() {
+      // 在页面加载完毕后执行的代码
+      console.log('页面加载完毕！');
+      loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));
+    };
+  </script>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 10px
+    }
+    thead {
+      background-color:#F0F0F0;
+    }
+    th,td {
+/*      color:#337AB7;*/
+      border: 1px solid #999;
+      padding: 3px 5px;
+    }
+  </style>
+  
+</head>
+<body>
+<main>
+<!-- Markdown Text -->
+<div id="markdown_text"></div>
+</main>
+<!-- <button onclick='loadMarkdownFile("./text.md" + "?ver=" + Math.floor(Math.random() * 1000000000));'>click me</button> -->
+
+</body>
+</html>
