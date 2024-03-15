@@ -38,3 +38,12 @@ img {
   display: none;
   list-style: none;
 }
+
+a {
+  color:#337AB7;
+  text-decoration: none;
+}
+a:hover {
+  color:#23527C;
+  text-decoration: underline;
+}

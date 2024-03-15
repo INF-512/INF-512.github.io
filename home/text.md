@@ -8,6 +8,8 @@
 
 2024/2/9 每日一图栏目[停更](/other/daily_picture_stop/)。
 
+2024/3/15 [OJ比赛日历](/oj_contest_calendar/)上线。
+
 ## 联系方式
 
 QQ Mail: 2716182349@qq.com
