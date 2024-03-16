@@ -46,6 +46,7 @@
 <li><a href="/other/cpp_build_run_setting">C++编译运行环境配置</a></li>
 <li><a href="/other/no_res_learn_oi">没有资源怎么自学信竟</a></li>
 <li><a href="/other/print_self">如何写一个程序打印自己的源代码</a></li>
+<li><a href="/other/oj_contest_calendar_offline">OJ比赛日历离线版</a></li>
 </ul>
 <ul id="u-problem_list-">
 <li onclick="replace_ul('u-problem_list-', 'u-')">&lt;题库</li>

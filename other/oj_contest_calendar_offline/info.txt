@@ -1,0 +1,3 @@
+name=OJ比赛日历离线版
+type=article
+rank=1007
