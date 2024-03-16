@@ -147,7 +147,7 @@ signed main() {
   get_luogu_contest();
   sort(all(cts), [](Contest &a, Contest &b) { return a.start_second < b.start_second || (a.start_second == b.start_second && a.name < b.name); });
   // struct Contest { string platform; string link; tm start_time; int hour, minute; string name; };
-  ofstream f("./text.md");
+  ofstream f("E:/oj_contest_calendar/text.md");
   f << "# <div style=\"text-align:center\">OJ Contest Calendar</div>" << endl;
   // f << "|<div style=\"width:150px;text-align:center\">Start Time</div>|Contest Name|<div style=\"width:75px;text-align:center\">Duration</div>|" << endl;
   // f << "|---|---|---|" << endl;
@@ -182,7 +182,7 @@ signed main() {
   f << "</table>" << endl;
   f << "<div style=\"text-align:center;\">made by " "<a href=\"https://inf-512.github.io/\" target=\"_blank\">INF_512</a>" "</div>" << endl;
   f.close();
-  system("D:/Program/Git/git-bash.exe --cd-to-home -c 'E:/oj_contest_calendar/pushup.bat'");
+  // system("D:/Program/Git/git-bash.exe --cd-to-home -c 'E:/oj_contest_calendar/pushup.bat'");
   return 0;
 }
 
