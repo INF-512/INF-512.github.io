@@ -37,7 +37,7 @@ void print_tm(tm t) {
 }
 vector<Contest> cts;
 void get_codeforces_contest() {
-  system("D:/Program/anaconda4/python.exe get_html.py https://mirror.codeforces.com/contests codeforces.html");
+  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://mirror.codeforces.com/contests E:/oj_contest_calendar/codeforces.html");
   string txt;
   ifstream f("codeforces.html");
   loop(1000) {
@@ -67,7 +67,7 @@ void get_codeforces_contest() {
   }
 }
 void get_atcoder_contest() {
-  system("D:/Program/anaconda4/python.exe get_html.py https://atcoder.jp/contests/ atcoder.html");
+  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://atcoder.jp/contests/ E:/oj_contest_calendar/atcoder.html");
   string txt;
   ifstream f("atcoder.html");
   while (f.getline(buf, N))
@@ -99,7 +99,7 @@ void get_atcoder_contest() {
   }
 }
 void get_luogu_contest() {
-  system("D:/Program/anaconda4/python.exe get_html.py https://www.luogu.com.cn/contest/list luogu.html");
+  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://www.luogu.com.cn/contest/list E:/oj_contest_calendar/luogu.html");
   string txt;
   ifstream f("luogu.html");
   while (f.getline(buf, N))
