@@ -4,8 +4,10 @@ using namespace std;
 using namespace chrono;
 #define loop(n) for (int _n = n; _n; _n--)
 #define all(x) (x).begin(), (x).end()
+#define GET_HTML 1
 const int N = 2e5 + 5;
 char buf[N];
+string cur_path;
 struct Contest {
   // 比赛平台
   string platform;
@@ -36,10 +38,18 @@ void print_tm(tm t) {
   cout << t.tm_isdst << endl;
 }
 vector<Contest> cts;
+string get_self_path(char* argv0) {
+  regex base_regex("([\\s\\S]*)test\\.exe$");
+  smatch base_match;
+  string s = argv0;
+  assert(regex_match(s, base_match, base_regex));
+  cout << base_match[1] << endl;
+  return base_match[1];
+}
 void get_codeforces_contest() {
-  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://mirror.codeforces.com/contests E:/oj_contest_calendar/codeforces.html");
+  if (GET_HTML) system((cur_path + "get_html.exe " "https://mirror.codeforces.com/contests " + cur_path + "codeforces.html").c_str());
   string txt;
-  ifstream f("E:/oj_contest_calendar/codeforces.html");
+  ifstream f(cur_path + "codeforces.html");
   loop(1000) {
     f.getline(buf, N);
     txt += buf, txt += '\n';
@@ -67,9 +77,9 @@ void get_codeforces_contest() {
   }
 }
 void get_atcoder_contest() {
-  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://atcoder.jp/contests/ E:/oj_contest_calendar/atcoder.html");
+  if (GET_HTML) system((cur_path + "get_html.exe " "https://atcoder.jp/contests/ " + cur_path + "atcoder.html").c_str());
   string txt;
-  ifstream f("E:/oj_contest_calendar/atcoder.html");
+  ifstream f(cur_path + "atcoder.html");
   while (f.getline(buf, N))
     txt += buf, txt += '\n';
   f.close();
@@ -99,9 +109,9 @@ void get_atcoder_contest() {
   }
 }
 void get_luogu_contest() {
-  system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://www.luogu.com.cn/contest/list E:/oj_contest_calendar/luogu.html");
+  if (GET_HTML) system((cur_path + "get_html.exe " "https://www.luogu.com.cn/contest/list " + cur_path + "luogu.html").c_str());
   string txt;
-  ifstream f("E:/oj_contest_calendar/luogu.html");
+  ifstream f(cur_path + "luogu.html");
   while (f.getline(buf, N))
     txt += buf, txt += '\n';
   f.close();
@@ -140,49 +150,101 @@ string f2(int hour, int minute) {
   sprintf(buf, "%02d:%02d", hour, minute);
   return buf;
 }
-signed main() {
+string head = R"RawString(
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OJ Contest Calendar</title>
+  <style>
+    @font-face {
+      font-family: abc;
+      src: url("https://inf-512.github.io/lib/ttf/CascadiaCode-Regular.ttf");
+    }
+    code { font-family: "abc", monospace; }
+    body {
+      font-family: "abc";
+      margin: 0 auto;
+    }
+    main {
+      max-width:800px;
+      word-break: break-all;
+      word-wrap:break-word;
+      margin: 0 auto;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 10px
+    }
+    thead {
+      background-color:#F0F0F0;
+    }
+    th,td {
+      border: 1px solid #999;
+      padding: 3px 5px;
+    }
+    a {
+      color:#337AB7;
+      text-decoration: none;
+    }
+    a:hover {
+      color:#23527C;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<main>
+<div id="markdown_text">
+
+<h1><div style="text-align:center">OJ Contest Calendar</div></h1>
+<table>
+<thead>
+<tr>
+<th><div style="width:150px;text-align:center">Start Time</div></th>
+<th>Contest Name</th>
+<th><div style="width:75px;text-align:center">Duration</div></th>
+</tr>
+</thead>
+<tbody>
+
+)RawString";
+string tail = R"RawString(
+
+</tbody>
+</table>
+<div style="text-align:center;">made by <a href="https://inf-512.github.io/" target="_blank">INF_512</a></div>
+
+</div>
+</main>
+</body>
+</html>
+)RawString";
+string mid;
+signed main(signed argc, char* argv[]) {
   system("chcp 65001");
+  cur_path = get_self_path(argv[0]);
   get_codeforces_contest();
   get_atcoder_contest();
   get_luogu_contest();
   sort(all(cts), [](Contest &a, Contest &b) { return a.start_second < b.start_second || (a.start_second == b.start_second && a.name < b.name); });
-  // struct Contest { string platform; string link; tm start_time; int hour, minute; string name; };
-  ofstream f("E:/oj_contest_calendar/text.md");
-  f << "# <div style=\"text-align:center\">OJ Contest Calendar</div>" << endl;
-  // f << "|<div style=\"width:150px;text-align:center\">Start Time</div>|Contest Name|<div style=\"width:75px;text-align:center\">Duration</div>|" << endl;
-  // f << "|---|---|---|" << endl;
-  f << "<table>" << endl;
-  f << "<thead>" << endl;
-  f << "<tr>" << endl;
-  f << "<th><div style=\"width:150px;text-align:center\">Start Time</div></th>" << endl;
-  f << "<th>Contest Name</th>" << endl;
-  f << "<th><div style=\"width:75px;text-align:center\">Duration</div></th>" << endl;
-  f << "</tr>" << endl;
-  f << "</thead>" << endl;
-  f << "<tbody>" << endl;
   int now = time(0), day = now / 86400 * 86400;
   for (auto&& [platform, link, start_time, start_second, hour, minute, name] : cts) {
     if (start_second < now)
       continue;
-    // strftime(buf, N, "%Y-%m-%d(%a) %H:%M", &start_time);
-    // cout << buf << ' ';
-    // sprintf(buf, "%02d:%02d", hour, minute);
-    // cout << buf << ' ' << name << endl;
-    // f << "|<div style=\"width:150px;text-align:center;color:#337AB7;\">" + f1(start_time) + "</div>|" + "<a href=\"" + link + "\" target=\"_blank\">" + name + "</a>" + "|<div style=\"width:75px;text-align:center\">" + f2(hour, minute) + "</div>|" << endl;
+    cout << f1(start_time) << ' ' << name << ' ' << f2(hour, minute) << endl;
     if (day <= start_second && start_second < day + 86400)
-      f << "<tr style=\"background-color:#C3E6CB\">" << endl;
+      mid += "<tr style=\"background-color:#C3E6CB\">\n";
     else
-      f << "<tr>" << endl;
-    f << "<td><div style=""\"width:150px;text-align:center;\">" + f1(start_time) + "</div></td>" << endl;
-    f << "<td><a href=\"" + link + "\" target=\"_blank\">" + name + "</a></td>" << endl;
-    f << "<td><div style=\"width:75px;text-align:center\">" + f2(hour, minute) + "</div></td>" << endl;
-    f << "</tr>" << endl;
+      mid += "<tr>\n";
+    mid += "<td><div style=""\"width:150px;text-align:center;\">" + f1(start_time) + "</div></td>\n";
+    mid += "<td><a href=\"" + link + "\" target=\"_blank\">" + name + "</a></td>\n";
+    mid += "<td><div style=\"width:75px;text-align:center\">" + f2(hour, minute) + "</div></td></tr>\n";
   }
-  f << "</tbody>" << endl;
-  f << "</table>" << endl;
-  f << "<div style=\"text-align:center;\">made by " "<a href=\"https://inf-512.github.io/\" target=\"_blank\">INF_512</a>" "</div>" << endl;
+  ofstream f(cur_path + "index.html");
+  f << head << mid << tail;
   f.close();
-  // system("D:/Program/Git/git-bash.exe --cd-to-home -c 'E:/oj_contest_calendar/pushup.bat'");
   return 0;
 }
 
