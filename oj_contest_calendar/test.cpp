@@ -39,7 +39,7 @@ vector<Contest> cts;
 void get_codeforces_contest() {
   system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://mirror.codeforces.com/contests E:/oj_contest_calendar/codeforces.html");
   string txt;
-  ifstream f("codeforces.html");
+  ifstream f("E:/oj_contest_calendar/codeforces.html");
   loop(1000) {
     f.getline(buf, N);
     txt += buf, txt += '\n';
@@ -69,7 +69,7 @@ void get_codeforces_contest() {
 void get_atcoder_contest() {
   system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://atcoder.jp/contests/ E:/oj_contest_calendar/atcoder.html");
   string txt;
-  ifstream f("atcoder.html");
+  ifstream f("E:/oj_contest_calendar/atcoder.html");
   while (f.getline(buf, N))
     txt += buf, txt += '\n';
   f.close();
@@ -101,7 +101,7 @@ void get_atcoder_contest() {
 void get_luogu_contest() {
   system("D:/Program/anaconda4/python.exe E:/oj_contest_calendar/get_html.py https://www.luogu.com.cn/contest/list E:/oj_contest_calendar/luogu.html");
   string txt;
-  ifstream f("luogu.html");
+  ifstream f("E:/oj_contest_calendar/luogu.html");
   while (f.getline(buf, N))
     txt += buf, txt += '\n';
   f.close();
