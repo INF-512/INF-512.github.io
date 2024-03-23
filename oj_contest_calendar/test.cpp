@@ -142,6 +142,42 @@ void get_luogu_contest() {
     it = base_match[0].second;
   }
 }
+void get_nowcoder_contest() {
+  if (GET_HTML) system((cur_path + "get_html.exe " "https://ac.nowcoder.com/acm/contest/vip-index " + cur_path + "nowcoder.html").c_str());
+  string txt;
+  ifstream f(cur_path + "nowcoder.html");
+  // while (f.getline(buf, N))
+  //   txt += buf, txt += '\n';
+  loop (300)
+    f.getline(buf, N), txt += buf, txt += '\n';
+  f.close();
+  regex base_regex(R"abc(<a href="(/acm/contest/[0-9]{5})"[\s\S]*?<a href="\1" target="_blank">([^<]*)[\s\S]*?比赛时间：  (.*)\n 至   (.*))abc");
+  smatch base_match;
+  string::const_iterator it = txt.begin();
+  while (regex_search(it, txt.cend(), base_match, base_regex)) {
+    // for (int i = 1; i < base_match.size(); i++)
+    //   cout << base_match[i].str() << endl;
+    Contest ct = {};
+    ct.platform = "牛客";
+    ct.link = "https://ac.nowcoder.com" + string(base_match[1]);
+    // 2024-03-16(Sat) 20:00
+    // 2024-03-06 10:00
+    stringstream(base_match[3]) >> get_time(&ct.start_time, "%Y-%m-%d %H:%M");
+    ct.start_second = mktime(&ct.start_time);
+    tm end_time = {};
+    stringstream(base_match[4]) >> get_time(&end_time, "%Y-%m-%d %H:%M");
+    int t = mktime(&end_time) - mktime(&ct.start_time);
+    ct.hour = t / 3600, ct.minute = (t % 3600) / 60;
+    // sscanf(string(base_match[3]).c_str(), "%d:%d", &ct.hour, &ct.minute);
+    ct.name = base_match[2];
+    cts.push_back(ct);
+    // strftime(buf, N, "%Y-%m-%d(%a) %H:%M", &ct.start_time);
+    // cout << buf << endl;
+    // sprintf(buf, "%02d:%02d", ct.hour, ct.minute);
+    // cout << buf << endl;
+    it = base_match[0].second;
+  }
+}
 string f1(tm t) {
   strftime(buf, N, "%Y-%m-%d(%a) %H:%M", &t);
   return buf;
@@ -224,10 +260,13 @@ string tail = R"RawString(
 string mid;
 signed main(signed argc, char* argv[]) {
   system("chcp 65001");
+  // get_nowcoder_contest();
+  
   cur_path = get_self_path(argv[0]);
   get_codeforces_contest();
   get_atcoder_contest();
   get_luogu_contest();
+  get_nowcoder_contest();
   sort(all(cts), [](Contest &a, Contest &b) { return a.start_second < b.start_second || (a.start_second == b.start_second && a.name < b.name); });
   int now = time(0), day = now / 86400 * 86400;
   for (auto&& [platform, link, start_time, start_second, hour, minute, name] : cts) {
