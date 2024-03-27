@@ -1,1 +1,1036 @@
-<html><head></head><body></body></html>
+<html><head>
+        <meta charset="utf-8">
+    <meta http-equiv="content-language" content="zh-CN">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="lFSmn0rlLR-OPkas5c2GxdhTKP4J4PyaahhQ2TNanjs">
+    <meta itemprop="image" content="https://static.nowcoder.com/acm/images-acm/res/logo/acm-logo.png">
+    <meta name="description" content="牛客竞赛是专业的编程算法训练平台，包括ACM校赛、ICPC、CCPC、CSP、信息学省选、NOI等编程比赛提高训练营。适合初级小白编程入门训练，包含CSP入门级提高级赛前集训、ACM区域赛前多校训练营。">
+    <meta name="keywords" content="ACM,CSP,NOI,CCPC,NOI,OI,ICPC,OJ,Virtual Judge,C语言,C++,提高组,普及组,信息学,算法,题解,编程比赛,程序设计,coding,在线编程,编程学习,训练,牛客网,牛客竞赛">
+        <title>牛客竞赛OJ_ACM/NOI/CSP/CCPC/ICPC_信息学编程算法训练平台</title>
+        
+
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/stylesheets-acm/v2lib/fontcustom/global/global.css">
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/stylesheets-acm/v2lib/global/global.ui.css">
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/stylesheets-acm/v2lib/base.css">
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/common.css">
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/env.css">
+<link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/stylesheets-acm/element-ui.css">
+    <meta name="nowcoder-uuid" content="f760ad55-1086-49ed-9de5-3ec15e026bc8">
+    
+    <link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/stylesheets-acm/v2/match/list.css">
+    <link rel="stylesheet" href="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/page/contestList/home/main.entry.css">
+</head>
+<body>
+        
+            <div class="nk-container acm-container">
+    
+    <div class="acm-header js-site-global-nav">
+        <div class="acm-header-main clearfix">
+            <a class="acm-logo" href="/" title="牛客竞赛">
+                <img src="//static.nowcoder.com/acm/images-acm/logo.png" style="width:139px;height:42px;" alt="">
+            </a>
+                    <ul class="acm-nav">
+                <li><a class="    " href="/">首页</a></li>
+                <li><a class="    selected active" href="/acm/contest/vip-index">比赛</a></li>
+                <li><a class="    " href="/acm/problem/list">题库</a></li>
+                <li><a class="    " href="/acm/course">课程</a></li>
+                <li><a class="    " href="/acm/discuss">竞赛讨论区</a></li>
+                
+            </ul>
+                                                    <div class="nav-account">
+                    <a href="//www.nowcoder.com/login?callBack=https%3A%2F%2Fac.nowcoder.com%2Facm%2Fcontest%2Fvip-index" class="nav-account-login" id="nav-login">登录</a>/
+                    <a href="//www.nowcoder.com/register?callBack=https%3A%2F%2Fac.nowcoder.com%2Facm%2Fcontest%2Fvip-index" class="nav-account-reg" id="jsNavRegister">注册</a>
+                </div>
+                        <ul class="acm-nav-info">
+                            <li>
+                    <a href="https://www.nowcoder.com/" target="_blank"><i class="icon-home"></i>去牛客</a>
+                </li>
+
+                                        </ul>
+        </div>
+    </div>
+
+
+    
+            
+    <div class="slide-banner-wrapper">
+    <ul class="banner-slide">
+                                <li>
+                        <a target="_blank" href="/jump?type=ad&amp;source=9&amp;companyId=134&amp;url=https%3A%2F%2Fdamo.alibaba.com%2Falibaba-global-mathematics-competition%3Flanguage%3Dzh%26source%3D1&amp;entityId=12280&amp;adGenre=3" class="banner-module" style="text-align: center; background:#953122" data-company-name="阿里巴巴">
+                <img src="https://uploadfiles.nowcoder.com/images/20240325/468296147_1711349287542/B10842409C4A08EE016F29125BDF1C6C" style="height: 300px; max-width: 100%">
+            </a>
+        </li>
+                                <li style="display:none">
+                        <a target="_blank" href="/jump?type=ad&amp;source=9&amp;companyId=1727&amp;url=https%3A%2F%2Fac.nowcoder.com%2Fdiscuss%2F1235854&amp;entityId=12141&amp;adGenre=3" class="banner-module" style="text-align: center; background:#F7FFFC" data-company-name="牛客">
+                <img src="https://uploadfiles.nowcoder.com/images/20231109/999991351_1699515311383/0EC7682C4E20EF65280D4C58D9BB785E" style="height: 300px; max-width: 100%">
+            </a>
+        </li>
+            </ul>
+    <ol class="banner-slide-dots"><li class="dot active"></li><li class="dot"></li></ol>
+</div>
+
+<div class="nk-main with-banner-page clearfix js-container">
+
+    <div class="nk-content">
+            <div class="">
+    <div class="search-input-wrap right match-search-wrapper js-match-search">
+    <form method="get" action="/acm-heavy/acm/contest/search">
+        <!-- <div class="search-input-wrap right focus match-search-wrapper"> -->
+        <label for="search" class="icon-search" style="cursor:pointer"></label>
+        <input type="text" name="searchName" placeholder="请输入比赛名称/比赛ID进行搜索" value="" autocomplete="off">
+        <input type="hidden" name="topCategoryFilter" value="13">
+    </form>
+</div>
+                <div class="match-type-mod-wrapper">
+                    <a href="?topCategoryFilter=13" class="type-item item1  selected ">
+    <h3>牛客系列赛</h3>
+            <p>最近比赛：03月29日 19:00</p>
+        <div class="info">
+            可以报名
+                            <span class="num">5场</span>
+                    </div>
+    </a>
+                    <a href="?topCategoryFilter=14" class="type-item item2 ">
+    <h3>高校校赛</h3>
+            <p>最近比赛：03月30日 10:30</p>
+        <div class="info">
+            可以报名
+                            <span class="num">2场</span>
+                    </div>
+    </a>
+                    <a href="?topCategoryFilter=15" class="type-item item3 ">
+    <h3>自主创建赛</h3>
+            <p>最近比赛：11月22日 14:00</p>
+        <div class="info">
+            可以报名
+                            <span class="num">99场</span>
+                    </div>
+    </a>
+        </div>
+        <div class="classes-tab-wrap">
+        <div class="classes-tab-main">
+                            <div class="introduce-txt">
+                                            牛客系列赛：包含大量牛客原创比赛、经典题组合赛、高质量集训营。参加牛客比赛，帮助竞赛选手快速提升。
+                                    </div>
+                        <div class="classes-item">
+                <div class="label">赛制</div>
+                <div class="cont open">
+                    <a href="?rankTypeFilter=-1&amp;signUpFilter=&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;orderType=NO" class="classes-tab classes-tab-selected">全部 </a>
+                    <a href="?rankTypeFilter=0&amp;signUpFilter=&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;orderType=NO" class="classes-tab ">ACM赛制</a>
+                    <a href="?rankTypeFilter=2&amp;signUpFilter=&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;orderType=NO" class="classes-tab ">OI赛制</a>
+                    <a href="?rankTypeFilter=3&amp;signUpFilter=&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;orderType=NO" class="classes-tab ">IOI赛制</a>
+                </div>
+            </div>
+                                    <div class="classes-item">
+                    <div class="label">类型</div>
+                    <div class="cont open">
+                        <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;signUpFilter=&amp;orderType=NO" class="classes-tab classes-tab-selected">全部 </a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=9&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">小白月赛</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=6&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">练习赛</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=2&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">挑战赛</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=19&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">牛客周赛</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=20&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">暑期多校</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=21&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">寒假集训营</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=3&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">OI赛前训练营</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=5&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">普及组</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=4&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">提高组 </a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=22&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">比赛真题</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=23&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">课程配套题目</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=24&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">娱乐赛</a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=7&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">基础训练营 </a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=1&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">提高训练营 </a>
+                                                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=10&amp;signUpFilter=&amp;orderType=NO" class="classes-tab ">其他</a>
+                                                                                    </div>
+                </div>
+                        <div class="classes-item">
+                <div class="label">状态</div>
+                <div class="cont">
+                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;orderType=NO" class="classes-tab classes-tab-selected">全部</a>
+                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;signUpFilter=1&amp;orderType=NO" class="classes-tab ">已报名参加</a>
+                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;signUpFilter=2&amp;orderType=NO" class="classes-tab ">报名未参加</a>
+                    <a href="?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;signUpFilter=3&amp;orderType=NO" class="classes-tab ">未报名</a>
+                                                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+            
+                    <div class="platform-mod js-current">
+                <div class="platform-mod-hd clearfix">
+                    <h2>等你来战</h2>
+                    <div class="platform-mod-oprt">
+                        <a href="javascript:void(0);" target="_blank" class="btn btn-primary nc-req-auth create-contest-btn js-create-contest" style="width: auto;padding: 2px 5px;border-radius: 4px;">创建比赛</a>
+                                            </div>
+                                                    </div>
+                                        <div data-id="76790" class="platform-item js-item " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:9000000,&amp;quot;contestEndTime&amp;quot;:1711719000000,&amp;quot;contestStartTime&amp;quot;:1711710000000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:220724405,&amp;quot;contestName&amp;quot;:&amp;quot;牛客练习赛123&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:2399,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Waiting&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:211724405,&amp;quot;signUpCount&amp;quot;:1382,&amp;quot;contestId&amp;quot;:76790,&amp;quot;contestSignUpEndTime&amp;quot;:1711719000000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1709690400000,&amp;quot;signUpCountDownTime&amp;quot;:-1807875595,&amp;quot;filledPassword&amp;quot;:false}" data-status="5">
+    <div class="platform-item-pic"><a href="/acm/contest/76790" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76790" target="_blank">牛客练习赛123</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-signup">报名中</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-06 10:00
+ 至     2024-03-29 21:30
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-29 19:00
+ 至     2024-03-29 21:30
+ (时长:2小时30分钟)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：1382</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞2399</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper"><a href="javascript:void(0);" class="btn btn-primary nc-req-auth">报名</a><div class="platform-countdown js-countdown">距比赛 2天10:48:43</div></div>
+    </div>
+</div>
+                                        <div data-id="76691" class="platform-item js-item " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1711976400000,&amp;quot;contestStartTime&amp;quot;:1711969200000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:478124403,&amp;quot;contestName&amp;quot;:&amp;quot;牛客2024年愚人节比赛&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;rankFrozenMillisecond&amp;quot;:3600000,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;rankFrozenMinute&amp;quot;:60,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20240305/999991351_1709609518785/E28D286F9ACFB4496A7902F20678E072&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:true,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;rankEndFrozenMillisecond&amp;quot;:1800000,&amp;quot;nbCount&amp;quot;:0,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;No&amp;quot;,&amp;quot;rankEndFrozenMinute&amp;quot;:30,&amp;quot;needRatingUpperLimit&amp;quot;:false,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:470924403,&amp;quot;signUpCount&amp;quot;:985,&amp;quot;contestId&amp;quot;:76691,&amp;quot;contestSignUpEndTime&amp;quot;:1711976400000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1709604000000,&amp;quot;signUpCountDownTime&amp;quot;:-1894275597,&amp;quot;filledPassword&amp;quot;:false}" data-status="5">
+    <div class="platform-item-pic"><a href="/acm/contest/76691" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20240305/999991351_1709609518785/E28D286F9ACFB4496A7902F20678E072"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76691" target="_blank">牛客2024年愚人节比赛</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+                        <span class="match-status  match-signup">报名中</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-05 10:00
+ 至     2024-04-01 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-04-01 19:00
+ 至     2024-04-01 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：985</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper"><a href="javascript:void(0);" class="btn btn-primary nc-req-auth">报名</a><div class="platform-countdown js-countdown">距比赛 5天10:48:43</div></div>
+    </div>
+</div>
+                                        <div data-id="78306" class="platform-item js-item " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1712322000000,&amp;quot;contestStartTime&amp;quot;:1712314800000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:823724401,&amp;quot;contestName&amp;quot;:&amp;quot;牛客小白月赛90&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1999,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Waiting&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:816524401,&amp;quot;signUpCount&amp;quot;:621,&amp;quot;contestId&amp;quot;:78306,&amp;quot;contestSignUpEndTime&amp;quot;:1712322000000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1710986400000,&amp;quot;signUpCountDownTime&amp;quot;:-511875599,&amp;quot;filledPassword&amp;quot;:false}" data-status="5">
+    <div class="platform-item-pic"><a href="/acm/contest/78306" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/78306" target="_blank">牛客小白月赛90</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-signup">报名中</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-21 10:00
+ 至     2024-04-05 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-04-05 19:00
+ 至     2024-04-05 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：621</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1999</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper"><a href="javascript:void(0);" class="btn btn-primary nc-req-auth">报名</a><div class="platform-countdown js-countdown">距比赛 9天10:48:43</div></div>
+    </div>
+</div>
+                                        <div data-id="78806" class="platform-item js-item " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:9000000,&amp;quot;contestEndTime&amp;quot;:1712928600000,&amp;quot;contestStartTime&amp;quot;:1712919600000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:1430324399,&amp;quot;contestName&amp;quot;:&amp;quot;牛客练习赛124&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:2399,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Waiting&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:1421324399,&amp;quot;signUpCount&amp;quot;:97,&amp;quot;contestId&amp;quot;:78806,&amp;quot;contestSignUpEndTime&amp;quot;:1712928600000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1711418400000,&amp;quot;signUpCountDownTime&amp;quot;:-79875601,&amp;quot;filledPassword&amp;quot;:false}" data-status="5">
+    <div class="platform-item-pic"><a href="/acm/contest/78806" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/78806" target="_blank">牛客练习赛124</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-signup">报名中</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-26 10:00
+ 至     2024-04-12 21:30
+</li>
+                <li class="match-time-icon">比赛时间：    2024-04-12 19:00
+ 至     2024-04-12 21:30
+ (时长:2小时30分钟)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：97</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞2399</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper"><a href="javascript:void(0);" class="btn btn-primary nc-req-auth">报名</a><div class="platform-countdown js-countdown">距比赛 16天10:48:43</div></div>
+    </div>
+</div>
+                                        <div data-id="78807" class="platform-item js-item " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1713531600000,&amp;quot;contestStartTime&amp;quot;:1713524400000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:2033324397,&amp;quot;contestName&amp;quot;:&amp;quot;牛客小白月赛91&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1999,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Waiting&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:2026124397,&amp;quot;signUpCount&amp;quot;:103,&amp;quot;contestId&amp;quot;:78807,&amp;quot;contestSignUpEndTime&amp;quot;:1713531600000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1711418400000,&amp;quot;signUpCountDownTime&amp;quot;:-79875603,&amp;quot;filledPassword&amp;quot;:false}" data-status="5">
+    <div class="platform-item-pic"><a href="/acm/contest/78807" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/78807" target="_blank">牛客小白月赛91</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-signup">报名中</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-26 10:00
+ 至     2024-04-19 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-04-19 19:00
+ 至     2024-04-19 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：103</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1999</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper"><a href="javascript:void(0);" class="btn btn-primary nc-req-auth">报名</a><div class="platform-countdown js-countdown">距比赛 23天10:48:43</div></div>
+    </div>
+</div>
+                            </div>
+                
+                    <div class="platform-mod js-end">
+                <div class="platform-mod-hd clearfix">
+                    <h2>已结束</h2>
+                    <span class="platform-mod-tips">可以继续提交代码，不计入排名</span>
+
+                                    </div>
+                                        <div data-id="78292" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1711285800000,&amp;quot;contestStartTime&amp;quot;:1711278600000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:919247,&amp;quot;creatorName&amp;quot;:&amp;quot;比那名居的桃子&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-212475728,&amp;quot;contestName&amp;quot;:&amp;quot;牛客周赛 Round 38&amp;quot;,&amp;quot;type&amp;quot;:3,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1799,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[229574479],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;牛客竞赛&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;Finished&amp;quot;},&amp;quot;countDownTime&amp;quot;:-219675728,&amp;quot;signUpCount&amp;quot;:2593,&amp;quot;contestId&amp;quot;:78292,&amp;quot;contestSignUpEndTime&amp;quot;:1711285800000,&amp;quot;userLevel&amp;quot;:7,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1710986400000,&amp;quot;signUpCountDownTime&amp;quot;:-511875728,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/78292" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/78292" target="_blank">牛客周赛 Round 38</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                <a href="/discuss/98620" target="_blank" class="match-tag js-nc-title-tips" title="在IOI赛制下，所有选手的提交都将在比赛进行中实时评测，并按照实际得分总和排名并公布">IOI</a>
+            <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-21 10:00
+ 至     2024-03-24 21:10
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-24 19:10
+ 至     2024-03-24 21:10
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：牛客竞赛</li>
+                <li class="joins-icon">参与人数：2593</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1799</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/78292" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="76795" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1711112400000,&amp;quot;contestStartTime&amp;quot;:1711105200000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-385875730,&amp;quot;contestName&amp;quot;:&amp;quot;牛客小白月赛89&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1999,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[1101920,177389685,999991351,435610490],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;Finished&amp;quot;},&amp;quot;countDownTime&amp;quot;:-393075730,&amp;quot;signUpCount&amp;quot;:3525,&amp;quot;contestId&amp;quot;:76795,&amp;quot;contestSignUpEndTime&amp;quot;:1711112400000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1709690400000,&amp;quot;signUpCountDownTime&amp;quot;:-1807875730,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/76795" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76795" target="_blank">牛客小白月赛89</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-06 10:00
+ 至     2024-03-22 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-22 19:00
+ 至     2024-03-22 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：3525</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1999</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/76795" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="77231" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1710680400000,&amp;quot;contestStartTime&amp;quot;:1710673200000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:919247,&amp;quot;creatorName&amp;quot;:&amp;quot;比那名居的桃子&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-817875732,&amp;quot;contestName&amp;quot;:&amp;quot;牛客周赛 Round 37&amp;quot;,&amp;quot;type&amp;quot;:3,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1799,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[229574479],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;牛客竞赛&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;Finished&amp;quot;},&amp;quot;countDownTime&amp;quot;:-825075732,&amp;quot;signUpCount&amp;quot;:2573,&amp;quot;contestId&amp;quot;:77231,&amp;quot;contestSignUpEndTime&amp;quot;:1710680400000,&amp;quot;userLevel&amp;quot;:7,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1710122400000,&amp;quot;signUpCountDownTime&amp;quot;:-1375875732,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/77231" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/77231" target="_blank">牛客周赛 Round 37</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                <a href="/discuss/98620" target="_blank" class="match-tag js-nc-title-tips" title="在IOI赛制下，所有选手的提交都将在比赛进行中实时评测，并按照实际得分总和排名并公布">IOI</a>
+            <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-11 10:00
+ 至     2024-03-17 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-17 19:00
+ 至     2024-03-17 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：牛客竞赛</li>
+                <li class="joins-icon">参与人数：2573</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1799</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/77231" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="76652" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:10800000,&amp;quot;contestEndTime&amp;quot;:1710511200000,&amp;quot;contestStartTime&amp;quot;:1710500400000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-987075734,&amp;quot;contestName&amp;quot;:&amp;quot;牛客挑战赛73&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231127/999991351_1701076565321/B6D95C90C20C37C1F467623E0D80F1FA&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[450550838,999991351,618657675],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:false,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:-997875734,&amp;quot;signUpCount&amp;quot;:1899,&amp;quot;contestId&amp;quot;:76652,&amp;quot;contestSignUpEndTime&amp;quot;:1710511200000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1709517600000,&amp;quot;signUpCountDownTime&amp;quot;:-1980675734,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/76652" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231127/999991351_1701076565321/B6D95C90C20C37C1F467623E0D80F1FA"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76652" target="_blank">牛客挑战赛73</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-04 10:00
+ 至     2024-03-15 22:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-15 19:00
+ 至     2024-03-15 22:00
+ (时长:3小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：1899</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/76652" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="76609" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1710075600000,&amp;quot;contestStartTime&amp;quot;:1710068400000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:919247,&amp;quot;creatorName&amp;quot;:&amp;quot;比那名居的桃子&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-1422675736,&amp;quot;contestName&amp;quot;:&amp;quot;牛客周赛 Round 36&amp;quot;,&amp;quot;type&amp;quot;:3,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1799,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[8582211,919247,999991351,229574479],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;牛客竞赛&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;Finished&amp;quot;},&amp;quot;countDownTime&amp;quot;:-1429875736,&amp;quot;signUpCount&amp;quot;:2538,&amp;quot;contestId&amp;quot;:76609,&amp;quot;contestSignUpEndTime&amp;quot;:1710075600000,&amp;quot;userLevel&amp;quot;:7,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1709517600000,&amp;quot;signUpCountDownTime&amp;quot;:-1980675736,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/76609" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76609" target="_blank">牛客周赛 Round 36</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                <a href="/discuss/98620" target="_blank" class="match-tag js-nc-title-tips" title="在IOI赛制下，所有选手的提交都将在比赛进行中实时评测，并按照实际得分总和排名并公布">IOI</a>
+            <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-03-04 10:00
+ 至     2024-03-10 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-10 19:00
+ 至     2024-03-10 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：牛客竞赛</li>
+                <li class="joins-icon">参与人数：2538</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1799</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/76609" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="75771" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1709902800000,&amp;quot;contestStartTime&amp;quot;:1709895600000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-1595475738,&amp;quot;contestName&amp;quot;:&amp;quot;牛客小白月赛88&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1999,&amp;quot;nbCount&amp;quot;:0,&amp;quot;managerList&amp;quot;:[1101920,177389685,999991351,214360960],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:-1602675738,&amp;quot;signUpCount&amp;quot;:3663,&amp;quot;contestId&amp;quot;:75771,&amp;quot;contestSignUpEndTime&amp;quot;:1709902800000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1708308000000,&amp;quot;signUpCountDownTime&amp;quot;:-3190275738,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/75771" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231207/999991351_1701918730957/732108E8190586D3D0B21C23737FCE04"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/75771" target="_blank">牛客小白月赛88</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-02-19 10:00
+ 至     2024-03-08 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-08 19:00
+ 至     2024-03-08 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：3663</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1999</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/75771" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="76133" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:9000000,&amp;quot;contestEndTime&amp;quot;:1709472600000,&amp;quot;contestStartTime&amp;quot;:1709463600000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:919247,&amp;quot;creatorName&amp;quot;:&amp;quot;比那名居的桃子&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-2025675740,&amp;quot;contestName&amp;quot;:&amp;quot;牛客周赛 Round 35&amp;quot;,&amp;quot;type&amp;quot;:3,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1799,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;牛客竞赛&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:-2034675740,&amp;quot;signUpCount&amp;quot;:2596,&amp;quot;contestId&amp;quot;:76133,&amp;quot;contestSignUpEndTime&amp;quot;:1709472600000,&amp;quot;userLevel&amp;quot;:7,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1708912800000,&amp;quot;signUpCountDownTime&amp;quot;:-2585475740,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/76133" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/76133" target="_blank">牛客周赛 Round 35</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                <a href="/discuss/98620" target="_blank" class="match-tag js-nc-title-tips" title="在IOI赛制下，所有选手的提交都将在比赛进行中实时评测，并按照实际得分总和排名并公布">IOI</a>
+            <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-02-26 10:00
+ 至     2024-03-03 21:30
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-03 19:00
+ 至     2024-03-03 21:30
+ (时长:2小时30分钟)</li>
+                <li class="user-icon">主办方：牛客竞赛</li>
+                <li class="joins-icon">参与人数：2596</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1799</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/76133" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="75768" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:9000000,&amp;quot;contestEndTime&amp;quot;:1709299800000,&amp;quot;contestStartTime&amp;quot;:1709290800000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-2198475742,&amp;quot;contestName&amp;quot;:&amp;quot;牛客练习赛122&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:2399,&amp;quot;managerList&amp;quot;:[8671199,839549920,999991351,307236232],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:-2207475742,&amp;quot;signUpCount&amp;quot;:2407,&amp;quot;contestId&amp;quot;:75768,&amp;quot;contestSignUpEndTime&amp;quot;:1709299800000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1708308000000,&amp;quot;signUpCountDownTime&amp;quot;:-3190275742,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/75768" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231023/999991351_1698041518583/4A338599A4C130236C8E9E700B89A7B2"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/75768" target="_blank">牛客练习赛122</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-02-19 10:00
+ 至     2024-03-01 21:30
+</li>
+                <li class="match-time-icon">比赛时间：    2024-03-01 19:00
+ 至     2024-03-01 21:30
+ (时长:2小时30分钟)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：2407</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞2399</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/75768" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="75766" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:7200000,&amp;quot;contestEndTime&amp;quot;:1708866000000,&amp;quot;contestStartTime&amp;quot;:1708858800000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:919247,&amp;quot;creatorName&amp;quot;:&amp;quot;比那名居的桃子&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-2632275744,&amp;quot;contestName&amp;quot;:&amp;quot;牛客周赛 Round 34&amp;quot;,&amp;quot;type&amp;quot;:3,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:true,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:1799,&amp;quot;managerList&amp;quot;:&amp;quot;[]&amp;quot;,&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;牛客竞赛&amp;quot;,&amp;quot;needCharge&amp;quot;:false,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;Finished&amp;quot;},&amp;quot;countDownTime&amp;quot;:-2639475744,&amp;quot;signUpCount&amp;quot;:1711,&amp;quot;contestId&amp;quot;:75766,&amp;quot;contestSignUpEndTime&amp;quot;:1708866000000,&amp;quot;userLevel&amp;quot;:7,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1708308000000,&amp;quot;signUpCountDownTime&amp;quot;:-3190275744,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/75766" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231024/919247_1698133488580/D83B2FAF25FB04A2D62E52C202CB9781"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/75766" target="_blank">牛客周赛 Round 34</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                <a href="/discuss/98620" target="_blank" class="match-tag js-nc-title-tips" title="在IOI赛制下，所有选手的提交都将在比赛进行中实时评测，并按照实际得分总和排名并公布">IOI</a>
+            <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2024-02-19 10:00
+ 至     2024-02-25 21:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-02-25 19:00
+ 至     2024-02-25 21:00
+ (时长:2小时)</li>
+                <li class="user-icon">主办方：牛客竞赛</li>
+                <li class="joins-icon">参与人数：1711</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞1799</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/75766" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                                        <div data-id="67746" class="platform-item js-item  finish " data-json="{&amp;quot;isSignUp&amp;quot;:false,&amp;quot;teamName&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;contestDuration&amp;quot;:18000000,&amp;quot;contestEndTime&amp;quot;:1708682400000,&amp;quot;contestStartTime&amp;quot;:1708664400000,&amp;quot;topCategoryId&amp;quot;:13,&amp;quot;creatorId&amp;quot;:999991351,&amp;quot;creatorName&amp;quot;:&amp;quot;王清楚&amp;quot;,&amp;quot;signUpEndCountDownTime&amp;quot;:-2815875746,&amp;quot;contestName&amp;quot;:&amp;quot;2024牛客寒假算法基础集训营6&amp;quot;,&amp;quot;type&amp;quot;:0,&amp;quot;settingInfo&amp;quot;:{&amp;quot;allowTeamSignUp&amp;quot;:false,&amp;quot;isProblemAutoOpen&amp;quot;:false,&amp;quot;needSignUpField&amp;quot;:false,&amp;quot;excitationStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;problemOriginal&amp;quot;:true,&amp;quot;needRankFrozen&amp;quot;:false,&amp;quot;logoUrl&amp;quot;:&amp;quot;https://uploadfiles.nowcoder.com/images/20231017/999991351_1697536562053/BD58EBD9A2014DE92DDB3E3D87F01768&amp;quot;,&amp;quot;needSignUpRedirect&amp;quot;:false,&amp;quot;forceOnlyMyStatusFilter&amp;quot;:false,&amp;quot;needUserNameFormat&amp;quot;:false,&amp;quot;purchaseUrl&amp;quot;:&amp;quot;https://ac.nowcoder.com/order?itemId=41&amp;amp;itemType=ACM_CONTEST_CHARGE&amp;quot;,&amp;quot;sameEndTimeAsSignUpEnd&amp;quot;:true,&amp;quot;ratingUpperLimit&amp;quot;:2399,&amp;quot;price&amp;quot;:65.0,&amp;quot;managerList&amp;quot;:[999991351,8833682,8582211,229574479],&amp;quot;needPassword&amp;quot;:false,&amp;quot;organizerName&amp;quot;:&amp;quot;nowcoder.com&amp;quot;,&amp;quot;needCharge&amp;quot;:true,&amp;quot;allowMessage&amp;quot;:true,&amp;quot;ratingStatus&amp;quot;:&amp;quot;Finished&amp;quot;,&amp;quot;needRatingUpperLimit&amp;quot;:true,&amp;quot;rankSaveStatus&amp;quot;:&amp;quot;No&amp;quot;},&amp;quot;countDownTime&amp;quot;:-2833875746,&amp;quot;signUpCount&amp;quot;:7474,&amp;quot;contestId&amp;quot;:67746,&amp;quot;contestSignUpEndTime&amp;quot;:1708682400000,&amp;quot;userLevel&amp;quot;:8,&amp;quot;teamId&amp;quot;:0,&amp;quot;isManager&amp;quot;:false,&amp;quot;isTeamSignUp&amp;quot;:false,&amp;quot;contestSignUpStartTime&amp;quot;:1701396000000,&amp;quot;signUpCountDownTime&amp;quot;:-10102275746,&amp;quot;filledPassword&amp;quot;:false}">
+    <div class="platform-item-pic"><a href="/acm/contest/67746" target="_blank">
+        <img src="https://uploadfiles.nowcoder.com/images/20231017/999991351_1697536562053/BD58EBD9A2014DE92DDB3E3D87F01768"></a>
+    </div>
+    <div class="platform-item-main">
+        <div class="platform-item-cont">
+            <h4>
+                                    <a href="/acm/contest/67746" target="_blank">2024牛客寒假算法基础集训营6</a>
+                            <span class="btn btn-primary btn-xxs">原创</span>
+            <span class="tag-rating js-nc-title-tips" title="Rating赛奖品更加丰厚"><i>¥</i>&nbsp;<span>Rated</span></span>
+                    <span class="match-status  match-end-tag">比赛结束</span>
+                </h4>
+            <ul class="platform-info">
+                <li class="time-icon">报名时间：    2023-12-01 10:00
+ 至     2024-02-23 18:00
+</li>
+                <li class="match-time-icon">比赛时间：    2024-02-23 13:00
+ 至     2024-02-23 18:00
+ (时长:5小时)</li>
+                <li class="user-icon">主办方：nowcoder.com</li>
+                <li class="joins-icon">参与人数：7474</li>
+                                    <li class="icon-nc-flash2">不计Rating的范围：Rating＞2399</li>
+                            </ul>
+        </div>
+        <div class="platform-item-btn match-btn-wrapper">
+                    <a href="/acm/contest/67746" target="_blank" class="btn btn-default">回顾比赛</a>
+                                <div class="platform-countdown">
+                <a href="javascript:void(0);" class="btn btn-info js-join-readonly">创建重现赛</a>
+            </div>
+                    </div>
+    </div>
+</div>
+                            </div>
+            <div style="text-align: center;">
+                <a href="/acm/contest/vip-end-index?rankTypeFilter=-1&amp;onlyCreateFilter=false&amp;topCategoryFilter=13&amp;categoryFilter=-1&amp;signUpFilter=&amp;orderType=NO" target="_blank" class="btn btn-primary" style="width: 140px;">查看更多&gt;&gt;</a>
+            </div>
+        
+                                </div>
+
+    <div class="nk-bar">
+                        <div class="module-box">
+            <div class="side-subject-everyday">
+                <a href="https://ac.nowcoder.com/discuss/817596?f=b" target="_blank">
+                    <img src="//static.nowcoder.com/acm/images-acm/res/home/everyday2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="module-box">
+            <div class="module-head clearfix">
+                <h1>Rating排行榜</h1>
+            </div>
+            <div class="module-body">
+                <ul class="browse-list">
+                                            <li>
+                            <span class="browse-num  rank-top  rating1">1</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/776246359" target="_blank">
+                                    <span class="rate-score7" title="zhoukangyang">zhoukangyang</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score7">2953</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rank-top  rating2">2</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/288141082" target="_blank">
+                                    <span class="rate-score6" title="牛客288141082号">牛客288141082号</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2779</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rank-top  rating3">3</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/404610309" target="_blank">
+                                    <span class="rate-score6" title="墨染空">墨染空</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2735</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating4">4</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/8671199" target="_blank">
+                                    <span class="rate-score6" title="superguymj">superguymj</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2718</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating5">5</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/180761752" target="_blank">
+                                    <span class="rate-score6" title="Purslane_Ma">Purslane_Ma</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2716</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating6">6</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/329687984" target="_blank">
+                                    <span class="rate-score6" title="jiangly">jiangly</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2712</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating7">7</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/880380038" target="_blank">
+                                    <span class="rate-score6" title="Heltion">Heltion</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2683</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating8">8</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/497256985" target="_blank">
+                                    <span class="rate-score6" title="EnofTaiPeople">EnofTaiPeople</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2678</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating9">9</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/225557441" target="_blank">
+                                    <span class="rate-score6" title="Lynkcat">Lynkcat</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2653</div>
+                        </li>
+                                            <li>
+                            <span class="browse-num  rating10">10</span>
+                            <div class="name">
+                                <a href="/acm/contest/profile/848183624" target="_blank">
+                                    <span class="rate-score6" title="yydtq">yydtq</span>
+                                                                    </a>
+                            </div>
+                            <div class="num rate-score6">2650</div>
+                        </li>
+                                    </ul>
+                <a href="/acm/contest/rating-index" class="link-show-all">查看全部</a>
+            </div>
+
+        </div>
+        <div class="module-box">
+            <div class="module-head clearfix">
+                <h1>全网比赛日历</h1>
+            </div>
+            <div class="module-body">
+                <div class="date-tips">
+                    <img src="https://uploadfiles.nowcoder.com/images/20191008/9254955_1570522015232_EE1BA88327A47AE94C9D34F8755D0A63" alt="">
+                    <span>关注公众号“比赛自动姬”，<br>随时查询各平台比赛信息</span>
+                </div>
+
+                                                    <dl class="date-items">
+                                                                            <dt>星期五  2024-03-29</dt>
+
+                            <dd>
+                                <a href="https://ac.nowcoder.com/acm/contest/76790?from=acm_calendar" target="_blank">
+                                    <span class="time">19:00</span>
+                                    <span class="name">NowCoder</span>
+                                    <span class="info">牛客练习赛123</span>
+                                </a>
+                            </dd>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                            </dl>
+                                    <dl class="date-items">
+                                                                            <dt>星期六  2024-03-30</dt>
+
+                            <dd>
+                                <a href="https://ac.nowcoder.com/acm/contest/78567?from=acm_calendar" target="_blank">
+                                    <span class="time">10:30</span>
+                                    <span class="name">NowCoder</span>
+                                    <span class="info">信息工程大学第五届超越杯程序设计竞赛（同步赛）</span>
+                                </a>
+                            </dd>
+
+                                                                                                                                                                                                                                                                                                                                                        </dl>
+                                    <dl class="date-items">
+                                                                            <dt>星期一  2024-04-01</dt>
+
+                            <dd>
+                                <a href="https://ac.nowcoder.com/acm/contest/76691?from=acm_calendar" target="_blank">
+                                    <span class="time">19:00</span>
+                                    <span class="name">NowCoder</span>
+                                    <span class="info">牛客2024年愚人节比赛</span>
+                                </a>
+                            </dd>
+
+                                                                                                                                                                                                                                                                                    </dl>
+                
+
+                <a href="/acm/contest/calendar" class="link-show-all">查看全部</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+                
+        <div class="fixed-menu" style="bottom: 874px;">
+        <ul>
+            <li>
+                <a href="javascript:void(0);" class="gotop js-nav-go-top" title="回到顶部"></a>
+            </li>
+            <li>
+                <a class="fixed-wb" target="_blank" href="http://www.weibo.com/nowcoder"></a>
+                                                </li>
+            <li>
+                <a href="tencent://groupwpa/?subcmd=all&amp;param=7B2267726F757055696E223A3135373539343730352C2274696D655374616D70223A313431333130373737387D0A" class="qq" title="QQ"></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="wx"></a>
+                <div class="wx-qrcode">
+                    <img src="https://uploadfiles.nowcoder.com/files/20220314/969678311_1647247238051/f4ae23c726dcf93aa19eb8f77e4d084a.png" alt="二维码">
+                    <p>扫描二维码，关注牛客</p>
+                </div>
+            </li>
+            <li>
+                <a href="https://www.nowcoder.com/subject/index/b211632d69fd42f7b55aae38d4242fda" class="feedback" title="意见反馈"></a>
+                <a href="https://www.nowcoder.com/subject/index/b211632d69fd42f7b55aae38d4242fda" class="feedback-letter">意见反馈</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="qrcode"></a>
+                <div class="wx-qrcode">
+                    <img src="//uploadfiles.nowcoder.com/app/web_app_download.png" alt="二维码">
+                    <p>下载牛客APP，随时随地刷题</p>
+                </div>
+            </li>
+        </ul>
+                        </div>
+    
+<div class="acm-ft-wrap js-nowcoder-footer">
+            <div class="fixed-foot clearfix js-fixed-foot" style="display:none;">
+            <div class="fixed-foot-main">
+                <div class="fixed-foot-tip">刷真题、补算法、看面经、得内推</div>
+                <div class="fixed-foot-login">
+                    <span>使用第三方账号直接登录使用吧：</span>
+                    <a href="javascript:void(0);" data-href="https://api.weibo.com/oauth2/authorize?client_id=3023520088&amp;redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fsinaconfig&amp;response_type=code&amp;state=web&amp;scope=follow_app_official_microblog" class="ft-login-item ft-login-wb nc-js-action-oauth" title="登录微博"></a>
+                    <a href="javascript:void(0);" data-href="https://graph.qq.com/oauth2.0/authorize?client_id=101003590&amp;redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fqqconfig&amp;response_type=code&amp;state=web" class="ft-login-item ft-login-qz nc-js-action-oauth" title="登录Qzone"></a>
+                                    <a href="javascript:void(0);" data-href="/oauth2/login/wechat_mp_index" class="ft-login-item ft-login-wx nc-js-action-oauth" title="登录微信"></a>
+                    <a href="javascript:void(0);" data-href="https://github.com/login/oauth/authorize?client_id=1c539827b9400016d0c9&amp;scope=user:email&amp;redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fgitconfig&amp;response_type=code&amp;state=web" class="ft-login-item ft-login-git nc-js-action-oauth" title="登录git"></a>
+                    <a href="javascript:void(0);" class="more-login nc-req-auth">更多</a>
+                </div>
+            </div>
+        </div>
+    
+    <div class="acm-ft-cont clearfix">
+        <dl class="acm-ft-web-info">
+            <dt class="acm-ft-web-name">牛客竞赛，专业的竞技算法训练平台</dt>
+            <dd>
+                <a href="javascript:void(0);" class="ft-qq-ico">
+                    <div class="tooltip top">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner">
+                            <img width="110" src="//static.nowcoder.com/fe/file/oss/1660302382431UWXGW.png">
+                            <p>扫描二维码，进入QQ群</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="ft-wx-ico">
+                    <div class="tooltip top">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner">
+                            <img width="110" src="//uploadfiles.nowcoder.com/images/20171109/68_1510217575727_4FA2AAE7EB5CCAF0C9D0DEA16D00A11C">
+                            <p>扫码关注“比赛自动姬”</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://weibo.com/nowcoder" class="ft-wb-ico" target="_blank"></a>
+                <a href="https://www.zhihu.com/org/niu-ke-wang-53/activities" class="ft-zh-ico" target="_blank"></a>
+            </dd>
+        </dl>
+        <div class="txt-center">
+            <ul class="acm-ft-links">
+                <li><a href="//www.nowcoder.com/nowcoder/about">关于我们</a></li>
+                <li><a href="/nowcoder/recruitment">加入我们</a></li>
+                <li><a href="//www.nowcoder.com/subject/index/b211632d69fd42f7b55aae38d4242fda">意见反馈</a></li>
+                <li><a href="//hr.nowcoder.com">企业服务</a></li>
+                <li><a href="/nowcoder/school-cooperation">校企合作</a></li>
+                <li><a href="/html/cooperation">联系我们</a></li>
+                <li><a href="/html/disclaimer">免责声明</a></li>
+                <li><a href="/html/links">友情链接</a></li>
+            </ul>
+            <ul class="webrights">
+                <li>公司地址：北京市朝阳区北苑路北美国际商务中心K2座一层-北京牛客科技有限公司</li>
+                <li>
+                    <span>联系方式：<a href="tel:010-60728802">010-60728802</a></span>
+                    <span class="ml-2">投诉举报电话：<a href="tel:010-57596212">010-57596212</a>（朝阳人力社保局）</span>
+                </li>
+                <li>
+                    <span>牛客科技©<span id="jsNCPageFooterYear">2024</span> All rights reserved</span>
+                    <a href="mailto:admin@nowcoder.com" class="ml-4">admin@nowcoder.com</a>
+                </li>
+                <li>
+                    <a class="ft-info-item" target="_blank" href="//beian.miit.gov.cn">京ICP备14055008号-4</a>
+                    <a class="ft-info-item ml-1" target="_blank" href="//uploadfiles.nowcoder.com/acts/icp.png">增值电信业务经营许可证</a>
+                    <a class="ft-info-item ml-1" target="_blank" href="//static.nowcoder.com/protocol/license-center.html#business">营业执照</a>
+                    <a class="ft-info-item ml-1" target="_blank" href="//static.nowcoder.com/protocol/license-center.html#human-resources">人力资源服务许可证</a>
+                </li>
+                <li>
+                    <img src="//static.nowcoder.com/company/images/res/ghs.png" height="18">
+                    <a class="ft-info-item" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502036488">京公网安备 11010502036488号</a>
+                </li>
+            </ul>
+            <script async="" src="https://assets.growingio.com/2.1/gio.js"></script><script src="//hm.baidu.com/hm.js?a808a1326b6c06c437de769d1b85b870"></script><script>try{document.getElementById('jsNCPageFooterYear').innerHTML=new Date().getFullYear();}catch(e){}</script>
+        </div>
+
+    </div>
+</div>
+
+
+            <div class="living-layer js-global-tips" style="display:none;">
+        <a href="javascript:void(0);" class="icon-nc-cancel"></a>
+        <a class="cont js-global-tips-href" href="" target="_blank">
+            <i class="icon-nc-play"></i>
+            <div class="living-layer-cont">
+                <p class="living-layer-title"></p>
+                <p></p>
+            </div>
+        </a>
+    </div>
+    
+
+</div>
+        
+<script>
+        window.isLogin = false;
+        window.globalInfo = {
+        canLoadInIframe: 'true'
+    };
+            window.useNeteaseCaptcha = true;
+        window.globalInfo.isAcmCompleteInfo = false;
+        window.globalInfo.isAcmSuperAdmin = false;
+    window.globalInfo.acmUserPlanType = 2;
+    window.globalInfo.hasAcmUserPlanType = false;
+    window.showCodeCompleteV2 = true;
+</script>
+
+<script type="text/javascript">
+window.ncDeployImageRoot = "//static.nowcoder.com/acm";
+window.ncJsInDev =  false ;
+window.ncJsInPre = false;
+window.ncJsVersion = "1.03.12";
+window.ncJsPluginVersion = "1.0.17";
+window.ncIsInNowcoderMainSite = true;
+</script>
+
+<script type="text/javascript">
+(function () {
+var oBody = document.body;
+var sOverflow = oBody.style.overflow;
+var sUa = (window.navigator || {}).userAgent || '';
+var m = sUa.match(/MSIE ([^;]*)|Trident.*; rv(?:\s|:)?([0-9.]+)/) || [];
+var nVersion = +m[1] || +m[2] || 0;
+nVersion && nVersion <= 8 && _fShowMask();
+
+function _fShowMask() {
+    oBody.style.overflow = 'hidden';
+    var nWidth = window.document.documentElement.clientWidth;
+    var nHeight = window.document.documentElement.clientHeight;
+    var nTop = ('pageYOffset' in window ? window.pageYOffset : document.documentElement.scrollTop) || 0;
+    var sHtml = [
+    '<div style="position:absolute;left:0;top:' + nTop + 'px;z-index:99999;width:' + nWidth + 'px;height:' + nHeight + 'px;">',
+        '<div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);"></div>',
+        '<div class="pop-box" style="width:800px;z-index:100000;left:' + (nWidth - 800) / 2 + 'px;top:' + Math.max(0, (nHeight - 624) / 2) + nTop + 'px;">',
+            '<div class="pop-title"><h1>浏览器版本过低提示</h1><a href="javascript:void(0);" onclick="closeIE8GlobalMask()" class="pop-close" title="关闭"></a></div>',
+            '<div class="pop-content clearfix">',
+                '<div class="pop-subject-tips-wrapper">',
+                    '<a href="javascript:void(0);"><img src="//static.nowcoder.com/fe/style/images/common/res/tips/13.png"></a>',
+                    '<div class="pop-exit-main">你使用的浏览器版本过低，无法正常访问牛客<br />请使用牛客APP或更换浏览器。</div>',
+                    '<div class="pop-download-browser">',
+                        '<ul class="pop-browser-list">',
+                            '<li><p>下载牛客APP</p><div class="pic"><img src="https://uploadfiles.nowcoder.com/app/app_download.png"></div></li>',
+                            '<li><a href="https://static.nowcoder.com/b/i/googlechrome74_32.exe" target="_blank"><p>下载Chrome浏览器</p><div class="pic"><img src="//static.nowcoder.com/images/res/browser/chrome.png"></div></a></li>',
+                            '<li><a href="https://www.firefox.com.cn/download/#more" target="_blank"><p>下载Firefox浏览器</p><div class="pic"><img src="//static.nowcoder.com/images/res/browser/firefox.png"></div></a></li>',
+                        '</ul>',
+                        '<a href="javascript:void(0);" onclick="closeIE8GlobalMask()" class="link-green">我知道访问会出错，但是我还要继续用这个浏览器浏览 &gt;&gt;</a>',
+                    '</div>',
+                '</div>',
+            '</div>',
+        '</div>',
+    '</div>'].join('');
+    var oDv = document.createElement('div');
+    oDv.innerHTML = sHtml;
+    oBody.appendChild(oDv);
+    window.closeIE8GlobalMask = function () {
+        oBody.removeChild(oDv);
+        oBody.style.overflow = sOverflow;
+        _fShowBar();
+    };
+}
+
+function _fShowBar() {
+    var oDv = document.createElement('div');
+    oDv.innerHTML = '<div class="tip-block-box" onclick="closeIE8GlobalBar()" style="position:fixed;left:0;top:54px;width:100%;z-index:99999;"><div class="tip-block">你使用的浏览器版本过低，无法正常访问牛客，请使用牛客APP或更换浏览器，<a href="javascript:void(0);">点击查看详情</a>。</div></div>';
+    oBody.appendChild(oDv);
+    window.closeIE8GlobalBar  = function () {
+        oBody.removeChild(oDv);
+        _fShowMask();
+    };
+}
+})();
+</script>
+
+<script crossorigin="anonymous" src="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/vendor.dll.js" type="text/javascript"></script>
+                <script crossorigin="anonymous" src="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/runtime.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/common.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/lib/env.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a808a1326b6c06c437de769d1b85b870";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+(function () {
+!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.growingio.com/2.1/gio.js","gio");
+  gio('init', 'c196c3667d214851b11233f5c17f99d5', {});
+  gio('config',  {host : 'grow.nowcoder.com'});
+
+      gio('clearUserId');
+  
+
+  gio('send');
+})();
+
+</script>
+
+<script type="text/javascript" crossorigin="anonymous" src="//static.nowcoder.com/acm/nowcoder/2.0.81/javascripts-acm/page/contestList/home/main.entry.js"></script>
+
+</body></html>
