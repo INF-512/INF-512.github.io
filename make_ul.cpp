@@ -90,5 +90,6 @@ int main() {
   ofstream f("/global.ul");
   f << text;
   f.close();
+  system("pause");
   return 0;
 }
