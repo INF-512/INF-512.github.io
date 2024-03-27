@@ -8,7 +8,6 @@ namespace fs = std::filesystem;
 #define endl '\n'
 // #define endl " line in : " << __LINE__ << endl
 const int N = 2e5 + 5, INF = 1e18, P = 998244353;
-int cnt;
 void dfs(fs::path p) {
   for (const auto &file : fs::directory_iterator(p)) {
     if (file.is_directory()) {
@@ -16,8 +15,8 @@ void dfs(fs::path p) {
         dfs(file.path());
     }
     else if (file.is_regular_file()) {
-      // if (++cnt <= 10)
-        system((string("git add ") + file.path().string()).c_str());
+      cout << file.path().string() << endl;
+      system((string("git add ") + file.path().string()).c_str());
     }
   }
 }
@@ -27,7 +26,6 @@ void test() {
   dfs("E:/");
   system("git commit -m \"updata\"");
   system("git push");
-  system("pause");
 }
 signed main() {
   ios::sync_with_stdio(0);
