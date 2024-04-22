@@ -10,6 +10,10 @@
 
 2024/3/15 [OJ比赛日历](/oj_contest_calendar/)上线。
 
+2024/3/31 报名[轻微课二次元插画魔鬼特训班](https://www.qingwk.com/school)，班级学号：[星空班 EC-792-048](https://www.qingwk.com/u/72905412/class)。
+
+2024/4/24 轻微课二次元插画魔鬼特训班正式开课。
+
 ## 联系方式
 
 QQ Mail: 2716182349@qq.com
