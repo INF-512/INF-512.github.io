@@ -16,6 +16,8 @@
 
 2024/5/2 OJ比赛日历停止更新。
 
+2024/5/7 OI生涯正式结束。
+
 ## 联系方式
 
 QQ Mail: 2716182349@qq.com
@@ -25,5 +27,7 @@ CSDN: [INF_512](https://blog.csdn.net/INF_512)
 洛谷: [INF_512](https://www.luogu.com.cn/user/560068)
 
 Codeforces: [INF_512](https://codeforces.com/profile/INF_512)
+
+[FATE_512](https://codeforces.com/profile/FATE_512)
 
 AtCoder: [INF_512](https://atcoder.jp/users/INF_512)
