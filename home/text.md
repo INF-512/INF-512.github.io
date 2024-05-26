@@ -18,6 +18,8 @@
 
 2024/5/7 OI生涯正式结束。
 
+2024/5/24 努力学习28天的[成果](https://www.qingwk.com/coach/question/detail-16585283.html)。
+
 ## 联系方式
 
 QQ Mail: 2716182349@qq.com
