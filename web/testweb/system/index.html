@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Market后台管理系统主页</title>
+    <link rel="icon" href="/admin/images/favicon.ico" type="image/ico">
+    <meta name="keywords" content="基础脚手架角色权限管理系统">
+    <meta name="description" content="基础脚手架角色权限管理系统">
+    <meta name="author" content="">
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/admin/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/admin/css/style.min.css" rel="stylesheet">
+    <!--对话框-->
+    <link rel="stylesheet" href="/admin/js/jconfirm/jquery-confirm.min.css">
+</head>
+
+<body>
+    <div class="lyear-layout-web">
+        <div class="lyear-layout-container">
+            <!--左侧导航-->
+            <aside class="lyear-layout-sidebar">
+
+                <!-- logo -->
+                <div id="logo" class="sidebar-header">
+                    <a href="index.html"><img src="/admin/images/logo-sidebar.png" title="Market" alt="Market" /></a>
+                </div>
+                <div class="lyear-layout-sidebar-scroll">
+                    <nav class="sidebar-main">
+                        <ul class="nav nav-drawer">
+                            <li class="nav-item"> <a href="/system/index"><i class="mdi mdi-home"></i> 后台首页</a> </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-settings"></i>系统设置</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/menu/list"><i class="mdi mdi-view-list"></i> 菜单管理</a> </li>
+                                    <li class="second-menu"><a href="/admin/role/list"><i class="mdi mdi-account-settings-variant"></i> 角色管理</a> </li>
+                                    <li class="second-menu"><a href="/admin/user/list"><i class="mdi mdi-account-multiple"></i> 用户管理</a> </li>
+                                    <li class="second-menu"><a href="/system/operator_log_list"><i class="mdi mdi-tag-multiple"></i> 日志管理</a> </li>
+                                    <li class="second-menu"><a href="/admin/database_bak/list"><i class="mdi mdi-database"></i> 数据备份</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-dialpad"></i>物品管理</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/goods_category/list"><i class="mdi mdi-apps"></i> 分类管理</a> </li>
+                                    <li class="second-menu"><a href="/admin/goods/list"><i class="mdi mdi-cart"></i> 物品管理</a> </li>
+                                    <li class="second-menu"><a href="/admin/wanted_goods/list"><i class="mdi mdi-ticket"></i> 求购物品</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-account-multiple"></i>学生管理</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/student/list"><i class="mdi mdi-account-multiple"></i> 学生列表</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-comment-account"></i>评论管理</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/comment/list"><i class="mdi mdi-comment-multiple-outline"></i> 评论列表</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-alert"></i>举报管理</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/report/list"><i class="mdi mdi-view-headline"></i> 举报列表</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-onenote"></i>新闻公告</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/news/list"><i class="mdi mdi-book-open"></i> 公告列表</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-item-has-subnav">
+                                <a href="javascript:void(0)"><i class="mdi mdi-settings"></i>网站设置</a>
+                                <ul class="nav nav-subnav">
+                                    <li class="second-menu"><a href="/admin/friend_link/list"><i class="mdi mdi-vector-line"></i> 友情链接</a> </li>
+                                    <li class="second-menu"><a href="/admin/site_setting/setting"><i class="mdi mdi-wrench"></i> 站点设置</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </aside>
+            <!--End 左侧导航-->
+
+            <!--头部信息-->
+            <header class="lyear-layout-header">
+
+                <nav class="navbar navbar-default">
+                    <div class="topbar">
+
+                        <div class="topbar-left">
+                            <div class="lyear-aside-toggler">
+                                <span class="lyear-toggler-bar"></span>
+                                <span class="lyear-toggler-bar"></span>
+                                <span class="lyear-toggler-bar"></span>
+                            </div>
+                            <span class="navbar-page-title">  </span>
+                        </div>
+
+                        <ul class="topbar-right">
+                            <li class="dropdown dropdown-profile">
+                                <a href="javascript:void(0)" data-toggle="dropdown">
+                	<img class="img-avatar img-avatar-48 m-r-10" src="/photo/view?filename=20210225/1614219185125.jpg" alt="admin" />
+                <span>admin <span class="caret"></span></span>
+              </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li> <a href="/system/update_userinfo"><i class="mdi mdi-account"></i> 个人信息</a> </li>
+                                    <li> <a href="/system/update_pwd"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
+                                    <li class="divider"></li>
+                                    <li> <a href="/system/logout"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                                </ul>
+                            </li>
+                            <!--切换主题配色-->
+                            <li class="dropdown dropdown-skin">
+                                <span data-toggle="dropdown" class="icon-palette"><i class="mdi mdi-palette"></i></span>
+                                <ul class="dropdown-menu dropdown-menu-right" data-stopPropagation="true">
+                                    <li class="drop-title">
+                                        <p>主题</p>
+                                    </li>
+                                    <li class="drop-skin-li clearfix">
+                                        <span class="inverse">
+                    <input type="radio" name="site_theme" value="default" id="site_theme_1" checked>
+                    <label for="site_theme_1"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="site_theme" value="dark" id="site_theme_2">
+                    <label for="site_theme_2"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="site_theme" value="translucent" id="site_theme_3">
+                    <label for="site_theme_3"></label>
+                  </span>
+                                    </li>
+                                    <li class="drop-title">
+                                        <p>LOGO</p>
+                                    </li>
+                                    <li class="drop-skin-li clearfix">
+                                        <span class="inverse">
+                    <input type="radio" name="logo_bg" value="default" id="logo_bg_1" checked>
+                    <label for="logo_bg_1"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_2" id="logo_bg_2">
+                    <label for="logo_bg_2"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_3" id="logo_bg_3">
+                    <label for="logo_bg_3"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_4" id="logo_bg_4">
+                    <label for="logo_bg_4"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_5" id="logo_bg_5">
+                    <label for="logo_bg_5"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_6" id="logo_bg_6">
+                    <label for="logo_bg_6"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_7" id="logo_bg_7">
+                    <label for="logo_bg_7"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="logo_bg" value="color_8" id="logo_bg_8">
+                    <label for="logo_bg_8"></label>
+                  </span>
+                                    </li>
+                                    <li class="drop-title">
+                                        <p>头部</p>
+                                    </li>
+                                    <li class="drop-skin-li clearfix">
+                                        <span class="inverse">
+                    <input type="radio" name="header_bg" value="default" id="header_bg_1" checked>
+                    <label for="header_bg_1"></label>                      
+                  </span>
+                                        <span>                                                     
+                    <input type="radio" name="header_bg" value="color_2" id="header_bg_2">
+                    <label for="header_bg_2"></label>                      
+                  </span>
+                                        <span>                                                     
+                    <input type="radio" name="header_bg" value="color_3" id="header_bg_3">
+                    <label for="header_bg_3"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="header_bg" value="color_4" id="header_bg_4">
+                    <label for="header_bg_4"></label>                      
+                  </span>
+                                        <span>                                                     
+                    <input type="radio" name="header_bg" value="color_5" id="header_bg_5">
+                    <label for="header_bg_5"></label>                      
+                  </span>
+                                        <span>                                                     
+                    <input type="radio" name="header_bg" value="color_6" id="header_bg_6">
+                    <label for="header_bg_6"></label>                      
+                  </span>
+                                        <span>                                                     
+                    <input type="radio" name="header_bg" value="color_7" id="header_bg_7">
+                    <label for="header_bg_7"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="header_bg" value="color_8" id="header_bg_8">
+                    <label for="header_bg_8"></label>
+                  </span>
+                                    </li>
+                                    <li class="drop-title">
+                                        <p>侧边栏</p>
+                                    </li>
+                                    <li class="drop-skin-li clearfix">
+                                        <span class="inverse">
+                    <input type="radio" name="sidebar_bg" value="default" id="sidebar_bg_1" checked>
+                    <label for="sidebar_bg_1"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_2" id="sidebar_bg_2">
+                    <label for="sidebar_bg_2"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_3" id="sidebar_bg_3">
+                    <label for="sidebar_bg_3"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_4" id="sidebar_bg_4">
+                    <label for="sidebar_bg_4"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_5" id="sidebar_bg_5">
+                    <label for="sidebar_bg_5"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_6" id="sidebar_bg_6">
+                    <label for="sidebar_bg_6"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_7" id="sidebar_bg_7">
+                    <label for="sidebar_bg_7"></label>
+                  </span>
+                                        <span>
+                    <input type="radio" name="sidebar_bg" value="color_8" id="sidebar_bg_8">
+                    <label for="sidebar_bg_8"></label>
+                  </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--切换主题配色-->
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </header>
+            <!--End 头部信息-->
+            <!--页面主要内容-->
+            <main class="lyear-layout-content">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-primary">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">数据库备份文件</p>
+                                        <p class="h3 text-white m-b-0">21</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-database fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-danger">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">管理员用户总数</p>
+                                        <p class="h3 text-white m-b-0">4</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-account fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-success">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">管理员当前在线用户</p>
+                                        <p class="h3 text-white m-b-0">3</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-account-multiple fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-purple">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">后台操作日志</p>
+                                        <p class="h3 text-white m-b-0">11条</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-keyboard-close fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-primary">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">学生注册总数</p>
+                                        <p class="h3 text-white m-b-0">7</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-account-multiple fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-danger">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">物品发布总数</p>
+                                        <p class="h3 text-white m-b-0">30</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-database fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-success">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">求购物品发布总数</p>
+                                        <p class="h3 text-white m-b-0">5</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-database fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card bg-purple">
+                                <div class="card-body clearfix">
+                                    <div class="pull-right">
+                                        <p class="h6 text-white m-t-0">物品评论总数</p>
+                                        <p class="h3 text-white m-b-0">13条</p>
+                                    </div>
+                                    <div class="pull-left"> <span class="img-avatar img-avatar-48 bg-translucent"><i class="mdi mdi-comment-multiple-outline fa-1-5x"></i></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>系统最近操作日志</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>操作人</th>
+                                                    <th style="width:400px;">操作内容</th>
+                                                    <th>操作时间</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2024-06-01 10:23:43】登录系统！</td>
+                                                    <td>2024-6-1 10:23:44</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2024-06-01 09:24:02】登录系统！</td>
+                                                    <td>2024-6-1 9:24:02</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2024-06-01 09:20:45】登录系统！</td>
+                                                    <td>2024-6-1 9:20:46</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2024-06-01 09:10:19】登录系统！</td>
+                                                    <td>2024-6-1 9:10:19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2023-12-28 21:00:49】登录系统！</td>
+                                                    <td>2023-12-28 21:00:50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2021-03-20 17:18:27】登录系统！</td>
+                                                    <td>2021-3-20 17:18:27</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>admin</td>
+                                                    <td>修改网站设置:SiteSetting [siteName=金银的豆子, siteUrl=https://shop243665397.taobao.com/shop/view_shop.htm?spm=a1z0k.7628870.0.0.3bc74f7aMhcHen&shop_id=243665397, logo1=20210307/1615096736988.png, logo2=20200418/1587201663687.png,
+                                                        qrcode=20210223/1614075844201.png, allRights=金银的豆子]</td>
+                                                    <td>2021-3-7 13:59:04</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>admin</td>
+                                                    <td>修改网站设置:SiteSetting [siteName=金银的豆子, siteUrl=https://shop243665397.taobao.com/shop/view_shop.htm?spm=a1z0k.7628870.0.0.3bc74f7aMhcHen&shop_id=243665397, logo1=20210307/1615096691533.png, logo2=20200418/1587201663687.png,
+                                                        qrcode=20210223/1614075844201.png, allRights=金银的豆子]</td>
+                                                    <td>2021-3-7 13:58:19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2021-03-07 13:48:04】登录系统！</td>
+                                                    <td>2021-3-7 13:48:04</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>admin</td>
+                                                    <td>用户【admin】于【2021-03-07 13:34:34】登录系统！</td>
+                                                    <td>2021-3-7 13:34:34</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+            <!--End 页面主要内容-->
+        </div>
+    </div>
+    <script type="text/javascript" src="/admin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
+    <!--对话框-->
+    <script src="/admin/js/jconfirm/jquery-confirm.min.js"></script>
+    <script src="/admin/js/common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var currentUrl = window.location.pathname;
+            var curs = currentUrl.split("/");
+            currentUrl = curs[2];
+            $(".second-menu").each(function(i, e) {
+                var url = $(e).children("a").attr('href').split("/");
+                if (url[2] == currentUrl) {
+                    $(e).addClass('active');
+                    $(e).parent("ul").parent("li").addClass("active open")
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="/admin/js/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="/admin/js/main.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>
