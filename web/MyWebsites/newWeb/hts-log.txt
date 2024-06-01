@@ -1,0 +1,56 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 01 Jun 2024 11:05:03 at http://10.62.200.79:8081/home/index/index +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "zh, en, *" http://10.62.200.79:8081/home/index/index -O1 "E:\web\MyWebsites\newWeb" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:05:04	Warning: 	Moved Temporarily for 10.62.200.79:8081/robots.txt
+11:05:04	Warning: 	File has moved from 10.62.200.79:8081/robots.txt to http://10.62.200.79:8081/system/login
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20210307/1615096736988.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200418/1587201663687.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200402/1585834512163.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200402/1585834662625.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586084764264.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085005899.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085102042.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085217886.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085388834.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085499095.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085585909.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085681117.png
+11:05:35	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200405/1586085739125.png
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20210224/1614130816620.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20210224/1614130428350.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200412/1586621219617.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200412/1586621065769.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200412/1586620999408.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200412/1586620860709.png
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586620738132.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586620659982.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611861285.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611756004.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611630115.jpg
+11:05:36	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611479618.jpg
+11:05:50	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20210223/1614075844201.png
+11:05:50	Error: 	"Not Found" (404) at link 10.62.200.79:8081/home/index/www.baidu.com (from 10.62.200.79:8081/home/index/index)
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611370203.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611303491.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586611245599.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610997167.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610934287.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610811445.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610735654.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610506621.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586610285979.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586595414403.jpeg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586595364409.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586595290815.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586590067910.jpg
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586589915016.png
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200411/1586589170711.png
+11:05:57	Warning: 	File not parsed, looks like binary: 10.62.200.79:8081/photo/view?filename=20200406/1586181213129.jpg
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 1 seconds : 98 links scanned, 96 files written (2901347 bytes overall) [2918317 bytes received at 47841 bytes/sec]
+(1 errors, 44 warnings, 0 messages)
